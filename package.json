@@ -10,7 +10,8 @@
     "build": "vite build",
     "preview": "vite preview --port 4173 --strictPort",
     "bench:inferencia": "vite build --config bench/vite.config.ts && node bench/inferencia.mjs",
-    "bench:tti": "vite build --mode lt && node bench/tti.mjs"
+    "bench:tti": "vite build --mode lt && node bench/tti.mjs",
+    "e2e": "vite build && node app/e2e/hoy.mjs"
   },
   "devDependencies": {
     "lighthouse": "13.5.0",

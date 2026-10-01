@@ -4,27 +4,102 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <meta name="description" content="Tabien: escribe cómo estuvo tu día y te ayudamos con tus hábitos.">
+  <meta name="description" content="Tabien: escribe cómo estuvo tu día. Todo queda en tu teléfono.">
   <title>Tabien</title>
   <link rel="stylesheet" href="./src/ui/estilos.css">
 </head>
 <body>
   <main class="hoy">
-    <p class="aviso" id="aviso" hidden>
-      Prueba técnica (LT0): el modelo de esta página se entrenó solo con datos sintéticos.
+    <p class="aviso" id="aviso-lt" hidden>
+      Prueba técnica (LT): el modelo de esta página se entrenó solo con datos sintéticos.
       Sus porcentajes no significan nada sobre tu nota.
     </p>
-    <h1>Hoy</h1>
-    <form id="form-nota">
+    <p class="aviso" id="aviso-prototipo">
+      Prototipo. Tus notas se guardan solo en este dispositivo.
+    </p>
+
+    <header class="cabecera">
+      <h1>Hoy</h1>
+      <button type="button" class="enlace" id="abrir-ayuda">¿Necesitas ayuda ahora?</button>
+    </header>
+    <p class="fecha" id="fecha"></p>
+
+    <form id="form-dia" novalidate>
       <label for="nota">¿Cómo estuvo tu día?</label>
-      <textarea id="nota" rows="3" maxlength="2000"
+      <textarea id="nota" rows="4" maxlength="2000" aria-describedby="error-texto"
         placeholder="dormí pésimo, harta pega y cero ejercicio 😩"></textarea>
-      <button type="submit">Listo</button>
+      <p class="error" id="error-texto" role="alert"></p>
+
+      <fieldset class="chips">
+        <legend>Si quieres, agrega datos</legend>
+        <div class="chip">
+          <label for="sueno">😴 Horas de sueño</label>
+          <input id="sueno" inputmode="decimal" autocomplete="off" placeholder="7,5" aria-describedby="error-suenoHoras">
+          <p class="error" id="error-suenoHoras" role="alert"></p>
+        </div>
+        <div class="chip">
+          <label for="pasos">👟 Pasos</label>
+          <input id="pasos" inputmode="numeric" autocomplete="off" placeholder="6000" aria-describedby="error-pasos">
+          <p class="error" id="error-pasos" role="alert"></p>
+        </div>
+        <div class="chip">
+          <label for="agua">💧 Vasos de agua</label>
+          <input id="agua" inputmode="numeric" autocomplete="off" placeholder="6" aria-describedby="error-vasosAgua">
+          <p class="error" id="error-vasosAgua" role="alert"></p>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="principal">Guardar</button>
+      <p class="estado" id="estado" role="status"></p>
     </form>
-    <section class="tarjeta" aria-live="polite">
-      <h2>Esto entendí</h2>
-      <p id="entendi">Escribe una nota y te cuento qué entendí.</p>
+
+    <section class="tarjeta ayuda" id="ayuda" hidden tabindex="-1" aria-labelledby="titulo-ayuda">
+      <h2 id="titulo-ayuda">Hay personas que pueden ayudarte</h2>
+      <p id="ayuda-intro">Si estás pasando por un momento muy difícil, habla con alguien hoy. Estas líneas son gratuitas y confidenciales:</p>
+      <ul>
+        <li><strong>*4141</strong>: línea de prevención del suicidio (MINSAL), desde celulares.</li>
+        <li><strong>600 360 7777</strong>: Salud Responde, las 24 horas.</li>
+        <li><strong>131</strong>: SAMU, si es una emergencia.</li>
+      </ul>
+      <p>Si estás en peligro ahora mismo, llama al 131 o ve a la urgencia más cercana.</p>
+      <p class="suave">Tabien no es un servicio de salud y no avisa a nadie: tu nota sigue guardada solo en este dispositivo.</p>
     </section>
+
+    <section class="tarjeta" id="tarjeta-entendi" hidden aria-live="polite">
+      <h2>Esto entendí</h2>
+      <p id="entendi"></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Últimos días</h2>
+      <ul class="historial" id="historial"></ul>
+    </section>
+
+    <details class="tarjeta" id="ajustes">
+      <summary><h2>Mis datos</h2></summary>
+
+      <h3>Enviar al piloto</h3>
+      <p>Si participas en el piloto, puedes descargar un archivo para entregarlo. Antes de salir de tu teléfono:</p>
+      <ul class="suave">
+        <li>los correos, teléfonos y RUT se reemplazan por etiquetas;</li>
+        <li>las fechas se cambian por "día 0, día 1…";</li>
+        <li>las notas que hablen de crisis o de hacerse daño <strong>no</strong> se incluyen.</li>
+      </ul>
+      <p class="suave">Los nombres de personas todavía no se borran solos: revisa el archivo antes de entregarlo.</p>
+      <label class="consentimiento"><input type="checkbox" id="consiento"> Entiendo qué se exporta y quiero descargarlo esta vez.</label>
+      <button type="button" id="exportar" disabled>Descargar mis notas anonimizadas</button>
+      <p class="estado" id="estado-exportar" role="status"></p>
+
+      <h3>Borrar todo</h3>
+      <p>Borra todas tus notas y datos de este dispositivo. No se puede deshacer.</p>
+      <button type="button" class="peligro" id="borrar">Borrar todo</button>
+      <div id="confirmar-borrado" hidden>
+        <p><strong>¿Seguro? Se borrará todo y no hay vuelta atrás.</strong></p>
+        <button type="button" class="peligro" id="borrar-si">Sí, borrar todo</button>
+        <button type="button" id="borrar-no">Cancelar</button>
+      </div>
+      <p class="estado" id="estado-borrar" role="status"></p>
+    </details>
   </main>
   <script type="module" src="./src/ui/main.ts"></script>
 </body>
