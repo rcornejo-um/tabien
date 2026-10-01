@@ -1,0 +1,82 @@
+{
+ "rho=0.2 dias=30": {
+  "sensibilidad": 0.01,
+  "fdr": 0.882
+ },
+ "rho=0.2 dias=60": {
+  "sensibilidad": 0.02,
+  "fdr": 0.778
+ },
+ "rho=0.2 dias=90": {
+  "sensibilidad": 0.035,
+  "fdr": 0.741
+ },
+ "rho=0.2 dias=120": {
+  "sensibilidad": 0.06,
+  "fdr": 0.5
+ },
+ "rho=0.3 dias=30": {
+  "sensibilidad": 0.03,
+  "fdr": 0.786
+ },
+ "rho=0.3 dias=60": {
+  "sensibilidad": 0.075,
+  "fdr": 0.615
+ },
+ "rho=0.3 dias=90": {
+  "sensibilidad": 0.12,
+  "fdr": 0.368
+ },
+ "rho=0.3 dias=120": {
+  "sensibilidad": 0.27,
+  "fdr": 0.26
+ },
+ "rho=0.4 dias=30": {
+  "sensibilidad": 0.075,
+  "fdr": 0.464
+ },
+ "rho=0.4 dias=60": {
+  "sensibilidad": 0.205,
+  "fdr": 0.18
+ },
+ "rho=0.4 dias=90": {
+  "sensibilidad": 0.4,
+  "fdr": 0.184
+ },
+ "rho=0.4 dias=120": {
+  "sensibilidad": 0.615,
+  "fdr": 0.096
+ },
+ "rho=0.5 dias=30": {
+  "sensibilidad": 0.16,
+  "fdr": 0.36
+ },
+ "rho=0.5 dias=60": {
+  "sensibilidad": 0.5,
+  "fdr": 0.174
+ },
+ "rho=0.5 dias=90": {
+  "sensibilidad": 0.71,
+  "fdr": 0.145
+ },
+ "rho=0.5 dias=120": {
+  "sensibilidad": 0.88,
+  "fdr": 0.137
+ },
+ "rho=0.6 dias=30": {
+  "sensibilidad": 0.27,
+  "fdr": 0.229
+ },
+ "rho=0.6 dias=60": {
+  "sensibilidad": 0.755,
+  "fdr": 0.107
+ },
+ "rho=0.6 dias=90": {
+  "sensibilidad": 0.955,
+  "fdr": 0.132
+ },
+ "rho=0.6 dias=120": {
+  "sensibilidad": 0.995,
+  "fdr": 0.07
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "semilla31_60dias": {
+  "semilla": 31,
+  "personas": 40,
+  "dias": 60,
+  "ruido_temas": 0.0,
+  "sin_tono": false,
+  "hallazgos": 31,
+  "falsos": 4,
+  "fdr": 0.129,
+  "sensibilidad_moderada": 0.053,
+  "n_moderados": 38,
+  "sensibilidad_fuerte": 0.054,
+  "n_fuertes": 37,
+  "por_efecto": {
+   "estres_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 13,
+    "n_fue": 12
+   },
+   "ejercicio_tono": {
+    "moderado": 0.077,
+    "fuerte": 0.167,
+    "n_mod": 13,
+    "n_fue": 12
+   },
+   "pantallas_sueno": {
+    "moderado": 0.083,
+    "fuerte": 0.0,
+    "n_mod": 12,
+    "n_fue": 13
+   }
+  },
+  "falsos_por_par": {
+   "pasos→sueno_horas@1": 2,
+   "pantallas→pasos@0": 1,
+   "social→pasos@0": 1
+  },
+  "personas_con_hallazgo_antes_de_14_dias": 0
+ },
+ "semilla31_60dias_sin_tono": {
+  "semilla": 31,
+  "personas": 40,
+  "dias": 60,
+  "ruido_temas": 0.0,
+  "sin_tono": true,
+  "hallazgos": 7,
+  "falsos": 3,
+  "fdr": 0.429,
+  "sensibilidad_moderada": 0.04,
+  "n_moderados": 25,
+  "sensibilidad_fuerte": 0.0,
+  "n_fuertes": 25,
+  "por_efecto": {
+   "estres_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 13,
+    "n_fue": 12
+   },
+   "ejercicio_tono": {
+    "moderado": null,
+    "fuerte": null,
+    "n_mod": 0,
+    "n_fue": 0
+   },
+   "pantallas_sueno": {
+    "moderado": 0.083,
+    "fuerte": 0.0,
+    "n_mod": 12,
+    "n_fue": 13
+   }
+  },
+  "falsos_por_par": {
+   "pasos→sueno_horas@1": 2,
+   "pantallas→pasos@0": 1
+  },
+  "personas_con_hallazgo_antes_de_14_dias": 0
+ },
+ "semilla31_30dias": {
+  "semilla": 31,
+  "personas": 40,
+  "dias": 30,
+  "ruido_temas": 0.0,
+  "sin_tono": false,
+  "hallazgos": 7,
+  "falsos": 2,
+  "fdr": 0.286,
+  "sensibilidad_moderada": 0.0,
+  "n_moderados": 38,
+  "sensibilidad_fuerte": 0.0,
+  "n_fuertes": 37,
+  "por_efecto": {
+   "estres_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 13,
+    "n_fue": 12
+   },
+   "ejercicio_tono": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 13,
+    "n_fue": 12
+   },
+   "pantallas_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 12,
+    "n_fue": 13
+   }
+  },
+  "falsos_por_par": {
+   "estres→pasos@0": 1,
+   "pasos→sueno_horas@1": 1
+  },
+  "personas_con_hallazgo_antes_de_14_dias": 0
+ },
+ "semilla31_30dias_sin_tono": {
+  "semilla": 31,
+  "personas": 40,
+  "dias": 30,
+  "ruido_temas": 0.0,
+  "sin_tono": true,
+  "hallazgos": 2,
+  "falsos": 2,
+  "fdr": 1.0,
+  "sensibilidad_moderada": 0.0,
+  "n_moderados": 25,
+  "sensibilidad_fuerte": 0.0,
+  "n_fuertes": 25,
+  "por_efecto": {
+   "estres_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 13,
+    "n_fue": 12
+   },
+   "ejercicio_tono": {
+    "moderado": null,
+    "fuerte": null,
+    "n_mod": 0,
+    "n_fue": 0
+   },
+   "pantallas_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 12,
+    "n_fue": 13
+   }
+  },
+  "falsos_por_par": {
+   "estres→pasos@0": 1,
+   "pasos→sueno_horas@1": 1
+  },
+  "personas_con_hallazgo_antes_de_14_dias": 0
+ },
+ "semilla32_120dias": {
+  "semilla": 32,
+  "personas": 40,
+  "dias": 120,
+  "ruido_temas": 0.0,
+  "sin_tono": false,
+  "hallazgos": 51,
+  "falsos": 2,
+  "fdr": 0.039,
+  "sensibilidad_moderada": 0.049,
+  "n_moderados": 41,
+  "sensibilidad_fuerte": 0.105,
+  "n_fuertes": 38,
+  "por_efecto": {
+   "estres_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.067,
+    "n_mod": 15,
+    "n_fue": 15
+   },
+   "ejercicio_tono": {
+    "moderado": 0.0,
+    "fuerte": 0.154,
+    "n_mod": 11,
+    "n_fue": 13
+   },
+   "pantallas_sueno": {
+    "moderado": 0.133,
+    "fuerte": 0.1,
+    "n_mod": 15,
+    "n_fue": 10
+   }
+  },
+  "falsos_por_par": {
+   "animo→pasos@0": 1,
+   "sueno_horas→vasos_agua@0": 1
+  },
+  "personas_con_hallazgo_antes_de_14_dias": 0
+ },
+ "semilla32_120dias_sin_tono": {
+  "semilla": 32,
+  "personas": 40,
+  "dias": 120,
+  "ruido_temas": 0.0,
+  "sin_tono": true,
+  "hallazgos": 11,
+  "falsos": 1,
+  "fdr": 0.091,
+  "sensibilidad_moderada": 0.067,
+  "n_moderados": 30,
+  "sensibilidad_fuerte": 0.04,
+  "n_fuertes": 25,
+  "por_efecto": {
+   "estres_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.067,
+    "n_mod": 15,
+    "n_fue": 15
+   },
+   "ejercicio_tono": {
+    "moderado": null,
+    "fuerte": null,
+    "n_mod": 0,
+    "n_fue": 0
+   },
+   "pantallas_sueno": {
+    "moderado": 0.133,
+    "fuerte": 0.0,
+    "n_mod": 15,
+    "n_fue": 10
+   }
+  },
+  "falsos_por_par": {
+   "animo→pasos@0": 1
+  },
+  "personas_con_hallazgo_antes_de_14_dias": 0
+ },
+ "semilla31_60dias_ruido10": {
+  "semilla": 31,
+  "personas": 40,
+  "dias": 60,
+  "ruido_temas": 0.1,
+  "sin_tono": false,
+  "hallazgos": 22,
+  "falsos": 6,
+  "fdr": 0.273,
+  "sensibilidad_moderada": 0.0,
+  "n_moderados": 38,
+  "sensibilidad_fuerte": 0.027,
+  "n_fuertes": 37,
+  "por_efecto": {
+   "estres_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 13,
+    "n_fue": 12
+   },
+   "ejercicio_tono": {
+    "moderado": 0.0,
+    "fuerte": 0.083,
+    "n_mod": 13,
+    "n_fue": 12
+   },
+   "pantallas_sueno": {
+    "moderado": 0.0,
+    "fuerte": 0.0,
+    "n_mod": 12,
+    "n_fue": 13
+   }
+  },
+  "falsos_por_par": {
+   "pasos→sueno_horas@1": 2,
+   "vasos_agua→tono@0": 1,
+   "pantallas→pasos@0": 1,
+   "social→vasos_agua@0": 1,
+   "ejercicio→sueno_horas@1": 1
+  },
+  "personas_con_hallazgo_antes_de_14_dias": 0
+ }
+}

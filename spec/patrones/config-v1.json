@@ -1,0 +1,96 @@
+{
+ "version": "patrones-v1",
+ "dias_minimos": 14,
+ "pares_minimos": 14,
+ "minimo_por_grupo": 5,
+ "q_fdr": 0.05,
+ "rho_minimo": 0.3,
+ "contraccion_n0": 10,
+ "x": [
+  "estres",
+  "ejercicio",
+  "pantallas",
+  "social",
+  "estudio_trabajo",
+  "alimentacion",
+  "descanso",
+  "animo",
+  "sueno_horas",
+  "pasos",
+  "vasos_agua"
+ ],
+ "y": [
+  "sueno_horas",
+  "pasos",
+  "vasos_agua",
+  "tono"
+ ],
+ "tendencias": {
+  "ventana_reciente": 7,
+  "ventana_base": 21,
+  "minimo_reciente": 5,
+  "minimo_base": 10,
+  "d_minimo": 0.8
+ },
+ "variables": {
+  "estres": {
+   "tipo": "tema",
+   "nombre": "estrés"
+  },
+  "ejercicio": {
+   "tipo": "tema",
+   "nombre": "ejercicio"
+  },
+  "pantallas": {
+   "tipo": "tema",
+   "nombre": "pantallas"
+  },
+  "social": {
+   "tipo": "tema",
+   "nombre": "tu vida social"
+  },
+  "estudio_trabajo": {
+   "tipo": "tema",
+   "nombre": "estudio o trabajo"
+  },
+  "alimentacion": {
+   "tipo": "tema",
+   "nombre": "comida"
+  },
+  "descanso": {
+   "tipo": "tema",
+   "nombre": "descanso"
+  },
+  "animo": {
+   "tipo": "tema",
+   "nombre": "tu ánimo"
+  },
+  "sueno_horas": {
+   "tipo": "sueno",
+   "nombre": "horas de sueño",
+   "unidad": "h"
+  },
+  "pasos": {
+   "tipo": "numero",
+   "nombre": "pasos",
+   "unidad": "pasos"
+  },
+  "vasos_agua": {
+   "tipo": "numero",
+   "nombre": "vasos de agua",
+   "unidad": "vasos"
+  },
+  "tono": {
+   "tipo": "numero",
+   "nombre": "tu tono al escribir",
+   "unidad": "puntos"
+  }
+ },
+ "desfase_por_y": {
+  "sueno_horas": 1,
+  "pasos": 0,
+  "vasos_agua": 0,
+  "tono": 0
+ },
+ "desfase_nota": "x es del día t. sueno_horas del día t es la noche ANTERIOR a t, así que x(t)→sueño de esa noche = sueno_horas(t+1) → desfase 1. El resto se mide el mismo día. Ver decisions/007."
+}
