@@ -12,3 +12,6 @@ Ideas que aparecieron fuera de la fase en curso. Cada una indica de dónde sali�
 | 6 | Servir los pesos con Brotli en vez de gzip (suele comprimir algo mejor) | F0, H1 | F5 |
 | 7 | Medir en un teléfono Android real de gama baja como contraste del perfil emulado | F0, dispositivo de referencia | F5 |
 | 8 | Monitoreo de deriva: tasa de n-gramas que caen en cubetas "nunca vistas" en entrenamiento | F0, hashing | F6 |
+| 9 | Si la persona envía la nota antes de que el modelo termine de cargar: guardar la nota igual y completar "Esto entendí" cuando el modelo esté listo | F0, H4 | F5 |
+| 10 | Si las colisiones de 2¹⁴ cubetas cuestan calidad con D1: probar 15 bits int8, `idf` en float16 o podar n-gramas de 5 | F0, H1 | F2 |
+| 11 | Límite de largo de la nota en la UI (hoy `maxlength=2000`) y medir la latencia con notas largas reales | F0, H2 | F1 |
