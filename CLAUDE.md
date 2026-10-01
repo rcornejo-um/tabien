@@ -28,7 +28,7 @@ Presupuestos: JS inicial ≤ 100 KB gzip · ruta crítica ≤ 150 KB · carga in
 ## Límites no negociables
 
 - Ningún dato sale del dispositivo sin consentimiento explícito por acción. Anonimizar antes de cualquier exportación.
-- Capa de **riesgo** (solo reglas, léxico revisado por una persona) corre antes que todo; si se activa: recursos de ayuda, cero hábitos/rutas/rachas ese día.
+- Capa de **riesgo** (solo reglas, `spec/riesgo.md`) corre antes que todo; si se activa: recursos de ayuda, cero hábitos/rutas/rachas ese día, y su texto no se exporta. Hoy es **prototipo sin revisión clínica**: nada con personas reales hasta revisarla.
 - Catálogo de hábitos sin restricción calórica, ayuno, metas de peso ni conteo de calorías. Todo hábito con fuente.
 - Lenguaje **no causal y no clínico** ("cuando pasa X, suele pasar Y").
 - Evaluación: **división por persona** (GroupKFold), retención temporal, bóveda congelada que no se mira para decidir, IC 95% por bootstrap.
@@ -42,8 +42,11 @@ npm run typecheck
 npm run build            # app de prueba (H4)
 npm run bench:inferencia # H2 en el perfil de referencia
 npm run bench:tti        # H4 con Lighthouse
+npm run e2e              # pantalla Hoy en Chromium real
 
 # Python (desde ml/)
 uv run pytest
 env PYTHONPATH=src uv run python -m modelos.entrenar_m1
+env PYTHONPATH=src uv run python -m data.sintetico        # D0 v2.1
+env PYTHONPATH=src uv run python -m evaluacion.acuerdo A.jsonl B.jsonl
 ```

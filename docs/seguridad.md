@@ -1,6 +1,6 @@
 # Seguridad de la persona
 
-> **Estado:** esqueleto de F0. La capa de riesgo se implementa en **F1**, con un léxico revisado por una persona. En F0 **no existe** un detector "de mentira": un módulo que nunca se activa sería el silencio que este documento prohíbe.
+> **Estado (F1):** la capa de riesgo existe como **prototipo sin revisión clínica** (`riesgo-v1-prototipo`, `decisions/006`). Contrato: `spec/riesgo.md`. **No se usa con personas reales** hasta cumplir los pendientes de §4.
 
 ## 1. Capa de riesgo (T7)
 
@@ -35,6 +35,8 @@ El catálogo de hábitos **prohíbe**: restricción calórica, ayuno, metas de p
 
 ## 4. Pendientes
 
-- [ ] Léxico de riesgo v1 y su revisión humana (F1).
+- [x] Léxico de riesgo v1, versionado y con tests en Python y TS (F1).
+- [ ] **Revisión clínica** del léxico, de los textos de ayuda y del protocolo de contención. Bloquea el piloto.
+- [ ] Conjunto de frases de riesgo escrito por otra persona, para medir la sensibilidad real.
 - [ ] Verificar los números de ayuda vigentes (antes de cualquier publicación).
 - [ ] Test de guardarraíles del catálogo (F4).
