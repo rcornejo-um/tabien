@@ -1,0 +1,20 @@
+{
+ "generador": "sintetico_v0",
+ "uso_permitido": "solo mecánica (LT0-ML)",
+ "archivos": {
+  "d0_v0_entrenamiento.jsonl": {
+   "sha256": "1786a934b9fb3dc134024db7bfb3d4c988241f70e1db736627181dc30867a575",
+   "filas": 1914,
+   "semilla": 1,
+   "personas": 40,
+   "dias": 60
+  },
+  "d0_v0_paridad.jsonl": {
+   "sha256": "0a7a23f704bad8615748c4ca9457376e910f1e44b05cd977ef4c28f390158592",
+   "filas": 530,
+   "semilla": 2,
+   "personas": 13,
+   "dias": 50
+  }
+ }
+}

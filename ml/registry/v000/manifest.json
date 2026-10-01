@@ -1,0 +1,77 @@
+{
+ "formato": "tabien-lineal-v1",
+ "pipeline_version": "texto-v1",
+ "bits": 14,
+ "cubetas": 16384,
+ "etiquetas": [
+  "sueno",
+  "estres",
+  "alimentacion",
+  "ejercicio",
+  "animo",
+  "social",
+  "estudio_trabajo",
+  "pantallas",
+  "hidratacion",
+  "descanso"
+ ],
+ "dtype": "int8",
+ "layout": "cubeta-etiqueta",
+ "endianness": "little",
+ "secciones": {
+  "idf": {
+   "offset": 0,
+   "dtype": "float32",
+   "largo": 16384
+  },
+  "b": {
+   "offset": 65536,
+   "dtype": "float32",
+   "largo": 10
+  },
+  "escalas": {
+   "offset": 65576,
+   "dtype": "float32",
+   "largo": 10
+  },
+  "W": {
+   "offset": 65616,
+   "dtype": "int8",
+   "largo": 163840
+  }
+ },
+ "bytes": 229456,
+ "sha256_pesos": "c37d7d08e0b77b99823833f15f5caff16cf9f3fe534bf90620a7a9e281678590",
+ "version": "v000",
+ "publicable": false,
+ "motivo_no_publicable": "Entrenado solo con D0 v0 sintético. Existe para el LT0-ML (mecánica), no para personas.",
+ "umbrales": [
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5
+ ],
+ "umbrales_nota": "Provisorios. En F2 se ajustan por etiqueta en validación.",
+ "entrenamiento": {
+  "modelo": "M1: TF-IDF hasheado (palabras + n-gramas 2–5) + OneVsRest(LogisticRegression liblinear)",
+  "C": 4.0,
+  "notas": 1914,
+  "personas": 40
+ },
+ "dataset": {
+  "manifiesto": "ml/data/manifiestos/d0_v0.json",
+  "sha256": "1786a934b9fb3dc134024db7bfb3d4c988241f70e1db736627181dc30867a575"
+ },
+ "metricas_humo": {
+  "advertencia": "Sobre D0 v0 sintético, división por persona. NO es desempeño real: el modelo aprende el generador.",
+  "f1_micro": 0.9965,
+  "f1_macro": 0.9966
+ },
+ "creado": "2026-09-30"
+}
