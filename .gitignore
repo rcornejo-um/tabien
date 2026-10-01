@@ -1,0 +1,31 @@
+# --- Datos de personas: NUNCA a git ---
+ml/data/real/
+ml/data/piloto/
+ml/data/exportaciones/
+**/exportacion*.json
+**/notas*.csv
+**/notas*.jsonl
+*.csv
+*.jsonl
+!spec/fixtures/*.json
+
+# Datos sintéticos generados (se regeneran con semilla fija)
+ml/data/generado/
+
+# --- Entornos y dependencias ---
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- Builds y reportes ---
+dist/
+bench/resultados/*.html
+bench/resultados/crudo/
+.vite/
+
+# --- Editor / sistema ---
+.DS_Store
+.idea/
+.vscode/

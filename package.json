@@ -1,0 +1,21 @@
+{
+  "name": "tabien",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Tabien: app local-first que entiende notas diarias y propone rutas de hábitos",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.nucleo.json",
+    "build": "vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "bench:inferencia": "vite build --config bench/vite.config.ts && node bench/inferencia.mjs",
+    "bench:tti": "vite build && node bench/tti.mjs"
+  },
+  "devDependencies": {
+    "lighthouse": "13.5.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "vitest": "5.0.3"
+  }
+}

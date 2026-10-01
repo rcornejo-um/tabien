@@ -1,0 +1,61 @@
+{
+ "version": "texto-v1",
+ "paso": "hash",
+ "descripcion": "fnv1a32 sobre UTF-8. 'esperado' es entero sin signo de 32 bits.",
+ "casos": [
+  {
+   "id": "oficial-vacio",
+   "entrada": "",
+   "esperado": 2166136261,
+   "fuente": "vector oficial FNV-1a 32"
+  },
+  {
+   "id": "oficial-a",
+   "entrada": "a",
+   "esperado": 3826002220,
+   "fuente": "vector oficial FNV-1a 32"
+  },
+  {
+   "id": "oficial-foobar",
+   "entrada": "foobar",
+   "esperado": 3214735720,
+   "fuente": "vector oficial FNV-1a 32"
+  },
+  {
+   "id": "utf8-ñ",
+   "entrada": "ñ",
+   "esperado": 111002361,
+   "fuente": "calculado con .encode('utf-8') en Python (camino independiente del encoder UTF-8 en línea de TS)"
+  },
+  {
+   "id": "utf8-w:año",
+   "entrada": "w:año",
+   "esperado": 2011888,
+   "fuente": "calculado con .encode('utf-8') en Python (camino independiente del encoder UTF-8 en línea de TS)"
+  },
+  {
+   "id": "utf8-c:^añ",
+   "entrada": "c:^añ",
+   "esperado": 967386461,
+   "fuente": "calculado con .encode('utf-8') en Python (camino independiente del encoder UTF-8 en línea de TS)"
+  },
+  {
+   "id": "utf8-w:<emo_sueno>",
+   "entrada": "w:<emo_sueno>",
+   "esperado": 4054435054,
+   "fuente": "calculado con .encode('utf-8') en Python (camino independiente del encoder UTF-8 en línea de TS)"
+  },
+  {
+   "id": "utf8-c:pega$",
+   "entrada": "c:pega$",
+   "esperado": 2106045397,
+   "fuente": "calculado con .encode('utf-8') en Python (camino independiente del encoder UTF-8 en línea de TS)"
+  },
+  {
+   "id": "utf8-w:10000",
+   "entrada": "w:10000",
+   "esperado": 1671782047,
+   "fuente": "calculado con .encode('utf-8') en Python (camino independiente del encoder UTF-8 en línea de TS)"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": "texto-v1",
+  "paso": "anonimizar",
+  "descripcion": "Entrada: texto original. Esperado: texto con datos personales reemplazados. Escrito a mano.",
+  "casos": [
+    {"id": "email-basico", "entrada": "mi correo es ana.soto@uc.cl", "esperado": "mi correo es <email>"},
+    {"id": "email-con-puntuacion", "entrada": "escribe a profe.rojas@umayor.cl!!", "esperado": "escribe a <email>!!"},
+    {"id": "email-tras-tilde", "entrada": "écrire juan@x.com", "esperado": "écrire <email>"},
+    {"id": "telefono-movil-espacios", "entrada": "llámame al +56 9 1234 5678", "esperado": "llámame al <telefono>"},
+    {"id": "telefono-movil-pegado", "entrada": "+56912345678", "esperado": "<telefono>"},
+    {"id": "telefono-sin-prefijo", "entrada": "llamé al doctor al 987654321", "esperado": "llamé al doctor al <telefono>"},
+    {"id": "telefono-fijo", "entrada": "fijo: +56 2 2345 6789", "esperado": "fijo: <telefono>"},
+    {"id": "telefono-fijo-sin-prefijo", "entrada": "212345678", "esperado": "<telefono>"},
+    {"id": "rut-con-puntos-k", "entrada": "RUT 9.876.543-K", "esperado": "RUT <rut>"},
+    {"id": "rut-sin-puntos", "entrada": "rut 12345678-9 ok", "esperado": "rut <rut> ok"},
+    {"id": "rut-y-telefono", "entrada": "mi rut es 12.345.678-9 y mi cel 9 8765 4321", "esperado": "mi rut es <rut> y mi cel <telefono>"},
+    {"id": "no-toca-pasos", "entrada": "caminé 10000 pasos", "esperado": "caminé 10000 pasos"},
+    {"id": "no-toca-8-digitos", "entrada": "pasos: 12345678", "esperado": "pasos: 12345678"},
+    {"id": "no-toca-9-digitos-que-empiezan-en-1", "entrada": "123456789", "esperado": "123456789"},
+    {"id": "no-toca-decimales", "entrada": "dormí 7.5 horas", "esperado": "dormí 7.5 horas"},
+    {"id": "no-toca-año", "entrada": "año 2026", "esperado": "año 2026"},
+    {"id": "no-toca-emoji", "entrada": "Dormí bien 😴", "esperado": "Dormí bien 😴"},
+    {"id": "vacio", "entrada": "", "esperado": ""}
+  ]
+}

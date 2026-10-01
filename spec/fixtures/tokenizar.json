@@ -1,0 +1,22 @@
+{
+  "version": "texto-v1",
+  "paso": "tokenizar",
+  "descripcion": "palabras: entrada normalizada → lista de palabras. features: una palabra → features en orden. Escrito a mano.",
+  "palabras": [
+    {"id": "etiquetas-un-token", "entrada": "<emo_sueno> <email>", "esperado": ["<emo_sueno>", "<email>"]},
+    {"id": "negacion-sobrevive", "entrada": "no dormi bien", "esperado": ["no", "dormi", "bien"]},
+    {"id": "menor-que-suelto", "entrada": "x<3", "esperado": ["x", "3"]},
+    {"id": "guion-bajo", "entrada": "a b_c", "esperado": ["a", "b_c"]},
+    {"id": "ñ-y-etiqueta", "entrada": "año <rut>", "esperado": ["año", "<rut>"]},
+    {"id": "etiqueta-doble-angulo", "entrada": "<<emo_feliz>>", "esperado": ["<emo_feliz>"]},
+    {"id": "vacio", "entrada": "", "esperado": []}
+  ],
+  "features": [
+    {"id": "sol", "entrada": "sol", "esperado": ["w:sol", "c:^s", "c:so", "c:ol", "c:l$", "c:^so", "c:sol", "c:ol$", "c:^sol", "c:sol$", "c:^sol$"]},
+    {"id": "una-letra", "entrada": "a", "esperado": ["w:a", "c:^a", "c:a$", "c:^a$"]},
+    {"id": "ñ", "entrada": "año", "esperado": ["w:año", "c:^a", "c:añ", "c:ño", "c:o$", "c:^añ", "c:año", "c:ño$", "c:^año", "c:año$", "c:^año$"]},
+    {"id": "palabra-larga", "entrada": "pega", "esperado": ["w:pega", "c:^p", "c:pe", "c:eg", "c:ga", "c:a$", "c:^pe", "c:peg", "c:ega", "c:ga$", "c:^peg", "c:pega", "c:ega$", "c:^pega", "c:pega$"]},
+    {"id": "etiqueta-sin-ngramas", "entrada": "<email>", "esperado": ["w:<email>"]},
+    {"id": "numero", "entrada": "30", "esperado": ["w:30", "c:^3", "c:30", "c:0$", "c:^30", "c:30$", "c:^30$"]}
+  ]
+}
