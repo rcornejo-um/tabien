@@ -121,3 +121,11 @@ h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
 button:disabled { opacity: .55; cursor: not-allowed; }
 button.peligro { background: var(--peligro); color: var(--acento-texto); }
 button:not(.principal):not(.peligro):not(.enlace) { background: var(--superficie); color: var(--texto); border: 1px solid var(--borde); }
+
+/* --- F3: Lo que notamos --- */
+.hallazgos { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: .9rem; }
+.hallazgos li { padding-left: .75rem; border-left: 3px solid var(--acento); }
+.hallazgos p { margin: 0; }
+.hallazgo-titulo { font-weight: 600; }
+.etiqueta { display: inline-block; margin-top: .3rem; font-size: .8rem; padding: .1rem .5rem; border-radius: 999px; border: 1px solid var(--borde); color: var(--texto-suave); }
+.racha { margin: 1rem 0 0; color: var(--texto-suave); }

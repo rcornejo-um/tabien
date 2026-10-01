@@ -70,6 +70,14 @@
       <p id="entendi"></p>
     </section>
 
+    <section class="tarjeta" id="hallazgos" aria-labelledby="titulo-hallazgos">
+      <h2 id="titulo-hallazgos">Lo que notamos</h2>
+      <p class="suave" id="hallazgos-estado"></p>
+      <ul class="hallazgos" id="lista-hallazgos"></ul>
+      <ul class="hallazgos" id="lista-tendencias"></ul>
+      <p class="racha" id="racha" hidden></p>
+    </section>
+
     <section class="tarjeta">
       <h2>Últimos días</h2>
       <ul class="historial" id="historial"></ul>
@@ -89,6 +97,11 @@
       <label class="consentimiento"><input type="checkbox" id="consiento"> Entiendo qué se exporta y quiero descargarlo esta vez.</label>
       <button type="button" id="exportar" disabled>Descargar mis notas anonimizadas</button>
       <p class="estado" id="estado-exportar" role="status"></p>
+
+      <h3>Datos de ejemplo</h3>
+      <p>Para probar Tabien sin esperar dos semanas: carga 60 días de una persona <strong>inventada</strong>. Se mezclan con tus datos; "Borrar todo" los quita.</p>
+      <button type="button" id="cargar-demo">Cargar datos de ejemplo</button>
+      <p class="estado" id="estado-demo" role="status"></p>
 
       <h3>Borrar todo</h3>
       <p>Borra todas tus notas y datos de este dispositivo. No se puede deshacer.</p>

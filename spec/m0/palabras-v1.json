@@ -1,0 +1,234 @@
+{
+ "version": "m0-v1",
+ "descripcion": "M0: temas por palabras clave sobre el texto normalizado (texto-v1). Una palabra activa el tema si EMPIEZA con alguno de los prefijos, o si es exactamente una de las 'exactas'. Frases: secuencias de palabras exactas. Piso de la escalera de modelos y detector transparente para el prototipo. NO es un modelo entrenado.",
+ "temas": {
+  "sueno": {
+   "prefijos": [
+    "dorm",
+    "insomn",
+    "despert",
+    "trasnoch",
+    "siesta",
+    "zombie",
+    "acost",
+    "sueñ",
+    "sueno"
+   ],
+   "exactas": [
+    "<emo_sueno>"
+   ],
+   "frases": [
+    [
+     "pegue",
+     "pestaña"
+    ]
+   ]
+  },
+  "estres": {
+   "prefijos": [
+    "estres",
+    "ansie",
+    "ansios",
+    "colaps",
+    "chato",
+    "revent",
+    "nervio",
+    "agobi",
+    "sobrepas",
+    "presion",
+    "tranqui",
+    "relaj",
+    "piola",
+    "choread"
+   ],
+   "exactas": [
+    "<emo_estres>"
+   ],
+   "frases": [
+    [
+     "cabeza",
+     "a",
+     "mil"
+    ]
+   ]
+  },
+  "alimentacion": {
+   "prefijos": [
+    "almor",
+    "desayun",
+    "comi",
+    "comida",
+    "cafe",
+    "complet",
+    "sopaipill",
+    "frut",
+    "ensalad",
+    "papas",
+    "pizza",
+    "hambre",
+    "once"
+   ],
+   "exactas": [
+    "cene",
+    "cena",
+    "<emo_comida>",
+    "<emo_cafe>"
+   ],
+   "frases": []
+  },
+  "ejercicio": {
+   "prefijos": [
+    "gym",
+    "gimnas",
+    "trot",
+    "corr",
+    "camin",
+    "bici",
+    "yoga",
+    "pichang",
+    "entren",
+    "ejercic",
+    "pasos",
+    "escaler",
+    "natac"
+   ],
+   "exactas": [
+    "sillon",
+    "<emo_ejercicio>"
+   ],
+   "frases": [
+    [
+     "me",
+     "movi"
+    ]
+   ]
+  },
+  "pantallas": {
+   "prefijos": [
+    "celu",
+    "series",
+    "tiktok",
+    "scroll",
+    "instagram",
+    "netflix",
+    "pantall",
+    "youtube",
+    "redes"
+   ],
+   "exactas": [
+    "play",
+    "<emo_pantalla>"
+   ],
+   "frases": []
+  },
+  "social": {
+   "prefijos": [
+    "amig",
+    "familia",
+    "mama",
+    "papa",
+    "polol",
+    "carret",
+    "cabros",
+    "junte",
+    "pareja",
+    "videollamad",
+    "compañer",
+    "nadie"
+   ],
+   "exactas": [
+    "<emo_amor>"
+   ],
+   "frases": []
+  },
+  "estudio_trabajo": {
+   "prefijos": [
+    "trabaj",
+    "estudi",
+    "prueba",
+    "certamen",
+    "tesis",
+    "entreg",
+    "reunion",
+    "turno",
+    "oficina",
+    "tarea",
+    "informe",
+    "calculo",
+    "clase"
+   ],
+   "exactas": [
+    "u",
+    "<emo_estudio>",
+    "pega",
+    "pegas"
+   ],
+   "frases": []
+  },
+  "hidratacion": {
+   "prefijos": [
+    "agua",
+    "vasos",
+    "botella",
+    "hidrat"
+   ],
+   "exactas": [
+    "<emo_agua>"
+   ],
+   "frases": []
+  },
+  "descanso": {
+   "prefijos": [
+    "descans",
+    "relaj",
+    "libre",
+    "siesta",
+    "sillon",
+    "respiro",
+    "vacacion"
+   ],
+   "exactas": [
+    "pare"
+   ],
+   "frases": []
+  },
+  "animo": {
+   "prefijos": [
+    "feliz",
+    "triste",
+    "bajon",
+    "content",
+    "energia",
+    "animo",
+    "malas",
+    "gris",
+    "achacad",
+    "prendid"
+   ],
+   "exactas": [
+    "raja",
+    "bacan",
+    "cagá",
+    "caga",
+    "<emo_feliz>",
+    "<emo_triste>",
+    "<emo_enojo>",
+    "<emo_risa>"
+   ],
+   "frases": [
+    [
+     "buen",
+     "dia"
+    ],
+    [
+     "siento",
+     "solo"
+    ],
+    [
+     "siento",
+     "sola"
+    ]
+   ]
+  }
+ }
+}

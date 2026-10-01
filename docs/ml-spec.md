@@ -10,7 +10,7 @@ Este documento resume la §6 del prompt maestro y registra **qué cambió y por 
 | T2 | Tono (−2 a +2) | Ordinal | — | F2 |
 | T3 | Cantidades | Extracción por reglas | — | F2 |
 | T4 | Anonimización | Regex (email, teléfono, RUT) | `texto-v1` | F0; nombres en F2 |
-| T5 | Patrones por persona | Estadística explicable | — | F3 |
+| T5 | Patrones por persona | Estadística explicable | `patrones-v1` (Python + TS con paridad; `decisions/007`) | F3 |
 | T6 | Rutas de hábitos | Reglas → bandit | — | F4 |
 | T7 | Riesgo | Solo reglas curadas | `riesgo-v1-prototipo` (sin revisión clínica) | F1 |
 

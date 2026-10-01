@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Tabien: app local-first que entiende notas diarias y propone rutas de hábitos",
   "scripts": {
+    "dev": "vite --host",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.nucleo.json",
     "build": "vite build",

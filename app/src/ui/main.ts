@@ -5,6 +5,7 @@ import { ErrorEntrada, guardarDia, type Repositorio } from '../core/registro';
 import { construirExportacion, nuevoCodigoParticipante } from '../core/exportar';
 import { RepositorioMemoria } from '../core/memoria';
 import { RepositorioIndexedDB } from '../persistencia/indexeddb';
+import { cargarDemo, vistaHallazgos, type DiaDemo } from '../core/hallazgos';
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 
@@ -46,6 +47,62 @@ function cargarEnFormulario(r: RegistroDia | undefined): void {
   campos.suenoHoras.value = s(r?.suenoHoras ?? null);
   campos.pasos.value = s(r?.pasos ?? null);
   campos.vasosAgua.value = s(r?.vasosAgua ?? null);
+}
+
+function item(titulo: string, detalle?: string, etiqueta?: string): HTMLLIElement {
+  const li = document.createElement('li');
+  const t = document.createElement('p');
+  t.className = 'hallazgo-titulo';
+  t.textContent = titulo;
+  li.append(t);
+  if (detalle) {
+    const d = document.createElement('p');
+    d.className = 'suave';
+    d.textContent = detalle;
+    li.append(d);
+  }
+  if (etiqueta) {
+    const e = document.createElement('span');
+    e.className = 'etiqueta';
+    e.textContent = etiqueta;
+    li.append(e);
+  }
+  return li;
+}
+
+async function pintarHallazgos(): Promise<void> {
+  const registros = await repo.listar();
+  const t0 = performance.now();
+  const v = vistaHallazgos(registros, hoy());
+  // Medición para bench/e2e: costo del motor de patrones en el hilo principal.
+  (window as unknown as { __msHallazgos?: number }).__msHallazgos = performance.now() - t0;
+  const estadoH = $('hallazgos-estado');
+  const lista = $('lista-hallazgos');
+  const tend = $('lista-tendencias');
+  const racha = $('racha');
+  lista.replaceChildren();
+  tend.replaceChildren();
+  racha.hidden = true;
+  if (v.estado === 'oculto_por_riesgo') {
+    estadoH.textContent = 'Hoy no mostramos patrones. Lo importante ahora eres tú.';
+    return;
+  }
+  if (v.estado === 'pocos_dias') {
+    estadoH.textContent =
+      v.diasConDatos === 0
+        ? 'Cuando lleves 14 días con notas o datos, te contamos lo que notamos.'
+        : `Llevas ${v.diasConDatos} ${v.diasConDatos === 1 ? 'día' : 'días'}. Con ${v.faltan} más te contamos lo que notamos.`;
+  } else if (v.estado === 'sin_hallazgos') {
+    estadoH.textContent = `Revisamos ${v.diasConDatos} días y no encontramos nada claro todavía. Preferimos no inventar.`;
+  } else {
+    estadoH.textContent = `Basado en ${v.diasConDatos} días. Son asociaciones en tus datos, no causas.`;
+  }
+  lista.replaceChildren(...v.hallazgos.map((h) => item(h.titulo, h.evidencia, h.confianza)));
+  tend.replaceChildren(...v.tendencias.map((t) => item(t)));
+  if (v.racha !== null && v.racha >= 3) {
+    racha.textContent = `Llevas ${v.racha} días seguidos registrando.`;
+    racha.hidden = false;
+  }
 }
 
 async function pintarHistorial(): Promise<void> {
@@ -100,6 +157,7 @@ form.addEventListener('submit', async (e) => {
       window.dispatchEvent(new CustomEvent('tabien:guardado', { detail: r }));
     }
     await pintarHistorial();
+    await pintarHallazgos();
   } catch (err) {
     if (err instanceof ErrorEntrada) {
       $(`error-${err.campo}`).textContent = err.message;
@@ -154,6 +212,26 @@ $('borrar-si').addEventListener('click', async () => {
   estado.textContent = '';
   $('estado-borrar').textContent = 'Listo: se borró todo de este dispositivo.';
   await pintarHistorial();
+  await pintarHallazgos();
+});
+
+$('cargar-demo').addEventListener('click', async () => {
+  const boton = $<HTMLButtonElement>('cargar-demo');
+  boton.disabled = true;
+  try {
+    const r = await fetch(`${import.meta.env.BASE_URL}demo/persona-demo.json`);
+    if (!r.ok) throw new Error(String(r.status));
+    const demo = (await r.json()) as { dias: DiaDemo[] };
+    const n = await cargarDemo(repo, demo.dias, new Date());
+    $('estado-demo').textContent = `Listo: se cargaron ${n} días de una persona inventada. Mira "Lo que notamos".`;
+    await pintarHistorial();
+    await pintarHallazgos();
+    $('hallazgos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch {
+    $('estado-demo').textContent = 'No pude cargar los datos de ejemplo. Revisa tu conexión e inténtalo de nuevo.';
+  } finally {
+    boton.disabled = false;
+  }
 });
 
 async function iniciar(): Promise<void> {
@@ -167,6 +245,7 @@ async function iniciar(): Promise<void> {
   }
   cargarEnFormulario(await repo.obtener(hoy()));
   await pintarHistorial();
+  await pintarHallazgos();
   if (import.meta.env.MODE === 'lt') {
     $('aviso-lt').hidden = false;
     await import('./lt-modelo');

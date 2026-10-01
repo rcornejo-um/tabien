@@ -49,4 +49,6 @@ uv run pytest
 env PYTHONPATH=src uv run python -m modelos.entrenar_m1
 env PYTHONPATH=src uv run python -m data.sintetico        # D0 v2.1
 env PYTHONPATH=src uv run python -m evaluacion.acuerdo A.jsonl B.jsonl
+env PYTHONPATH=src:. uv run python -m patrones.evaluar --semilla 31   # criterio F3 con D0
+env PYTHONPATH=src:. uv run python -m data.demo                       # persona de ejemplo para la app
 ```

@@ -64,6 +64,23 @@ try {
 
   verificar('exportar parte deshabilitado (consentimiento por acción)', await ev(`document.getElementById('exportar').disabled`));
 
+  verificar('con riesgo hoy, "Lo que notamos" no muestra patrones',
+    (await ev(`document.getElementById('hallazgos-estado').textContent`)).includes('Hoy no mostramos'));
+
+  // Datos de ejemplo + costo del motor con CPU 4× (perfil web de referencia).
+  await ev(`document.getElementById('ajustes').open = true`);
+  await escribirYGuardar({ nota: 'día tranqui', sueno: '', pasos: '', agua: '' }); // hoy sin riesgo
+  await cdp.enviar('Emulation.setCPUThrottlingRate', { rate: 4 }, sessionId);
+  await ev(`document.getElementById('cargar-demo').click()`);
+  for (let i = 0; i < 60 && !(await ev(`document.getElementById('estado-demo').textContent`)); i++) await esperar(200);
+  const nHallazgos = await ev(`document.querySelectorAll('#lista-hallazgos li').length`);
+  verificar('los datos de ejemplo muestran hallazgos', nHallazgos >= 2, `hallazgos: ${nHallazgos}`);
+  const textoH = await ev(`document.getElementById('lista-hallazgos').textContent`);
+  verificar('las frases no son causales', !/\b(causa |provoca|debido|porque)/i.test(textoH.replace(/no una causa/g, '')));
+  const ms = await ev(`window.__msHallazgos`);
+  verificar(`motor de patrones con CPU 4×: ${ms.toFixed(1)} ms (≤ 100 ms)`, ms <= 100);
+  await cdp.enviar('Emulation.setCPUThrottlingRate', { rate: 1 }, sessionId);
+
   await ev(`document.getElementById('ajustes').open = true; document.getElementById('borrar').click()`);
   verificar('borrar pide confirmación', await ev(`!document.getElementById('confirmar-borrado').hidden`));
   await ev(`document.getElementById('borrar-si').click()`);
