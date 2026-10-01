@@ -14,7 +14,7 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "types": []
+    "types": ["vite/client"]
   },
   "include": ["app/src", "bench/src", "tipos"]
 }

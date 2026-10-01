@@ -31,7 +31,7 @@ Este documento resume la §6 del prompt maestro y registra **qué cambió y por 
 | Peldaño | Modelo | Estado |
 |---|---|---|
 | M0 | Palabras clave | F2 |
-| M1 | TF-IDF hasheado (palabras + n-gramas de caracteres 2–5) + regresión logística uno-contra-todos | Mecánica validada en F0 (ver `decisions/004`) |
+| M1 | TF-IDF hasheado (palabras + n-gramas de caracteres 2–5) + regresión logística uno-contra-todos | Mecánica validada en F0 (ver `decisions/003`); `v000` = 14 bits, int8, **no publicable** |
 | M2 | Embedding-bag con hashing (estilo fastText) | F2 |
 | M3 | BETO ajustado, solo taller | F2 |
 

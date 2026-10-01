@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Tabien: escribe cómo estuvo tu día y te ayudamos con tus hábitos.">
+  <title>Tabien</title>
+  <link rel="stylesheet" href="./src/ui/estilos.css">
+</head>
+<body>
+  <main class="hoy">
+    <p class="aviso" id="aviso" hidden>
+      Prueba técnica (LT0): el modelo de esta página se entrenó solo con datos sintéticos.
+      Sus porcentajes no significan nada sobre tu nota.
+    </p>
+    <h1>Hoy</h1>
+    <form id="form-nota">
+      <label for="nota">¿Cómo estuvo tu día?</label>
+      <textarea id="nota" rows="3" maxlength="2000"
+        placeholder="dormí pésimo, harta pega y cero ejercicio 😩"></textarea>
+      <button type="submit">Listo</button>
+    </form>
+    <section class="tarjeta" aria-live="polite">
+      <h2>Esto entendí</h2>
+      <p id="entendi">Escribe una nota y te cuento qué entendí.</p>
+    </section>
+  </main>
+  <script type="module" src="./src/ui/main.ts"></script>
+</body>
+</html>

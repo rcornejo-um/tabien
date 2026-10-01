@@ -1,0 +1,88 @@
+/* Tokens del tema celestial. Amanecer (claro) por defecto; noche (oscuro) según el sistema.
+   El contraste AA de cada par se verificará con un test en F5. */
+:root {
+  --fondo: #f6f7ff;
+  --superficie: #ffffff;
+  --texto: #14172b;
+  --texto-suave: #4a4f6b;
+  --acento: #0b6e85;
+  --acento-texto: #ffffff;
+  --borde: #d7dbf0;
+  --aviso: #8a5a00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #070b1a;
+    --superficie: #10162e;
+    --texto: #e9ecff;
+    --texto-suave: #a9b0d6;
+    --acento: #38e1ff;
+    --acento-texto: #070b1a;
+    --borde: #26305a;
+    --aviso: #ffc94d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 1rem/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.hoy {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+h1 { font-size: 1.75rem; margin: 0 0 1rem; }
+h2 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+
+label { display: block; margin-bottom: 0.5rem; color: var(--texto-suave); }
+
+textarea {
+  width: 100%;
+  min-height: 6rem;
+  padding: 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 0.75rem;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  resize: vertical;
+}
+
+button {
+  min-width: 44px;
+  min-height: 44px;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--acento);
+  color: var(--acento-texto);
+  font: inherit;
+  font-weight: 600;
+}
+
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
+
+.tarjeta {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  background: var(--superficie);
+}
+
+.aviso {
+  padding: 0.75rem;
+  border: 1px dashed var(--aviso);
+  border-radius: 0.75rem;
+  color: var(--aviso);
+  font-size: 0.9rem;
+}

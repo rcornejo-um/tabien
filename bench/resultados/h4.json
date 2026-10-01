@@ -1,0 +1,747 @@
+{
+ "hipotesis": "H4: cargar el modelo en diferido no mueve el TTI",
+ "criterio": "límite superior del IC 95% de (mediana TTI X − mediana TTI A) ≤ 50 ms, X ∈ {B, C}",
+ "perfil": {
+  "cpu": 4,
+  "red": {
+   "latencia": 150,
+   "bajadaKbps": 1638.4,
+   "subidaKbps": 750
+  },
+  "pantalla": {
+   "ancho": 412,
+   "alto": 823,
+   "factor": 1.75,
+   "movil": true
+  }
+ },
+ "lighthouse": "13.5.0 (throttlingMethod devtools)",
+ "corridasPorVariante": 15,
+ "descargoPesosSoloEnByC": true,
+ "resumen": {
+  "B": {
+   "tti": {
+    "medianaA": 1225.464,
+    "medianaX": 1228.741,
+    "diferencia": 3.2770000000000437,
+    "ic95": {
+     "bajo": -13.02299999999991,
+     "alto": 20.04099999999994
+    }
+   },
+   "fcp": {
+    "medianaA": 1225.464,
+    "medianaX": 1228.741,
+    "diferencia": 3.2770000000000437,
+    "ic95": {
+     "bajo": -13.02299999999991,
+     "alto": 20.04099999999994
+    }
+   },
+   "lcp": {
+    "medianaA": 1239.749,
+    "medianaX": 1238.897,
+    "diferencia": -0.8520000000000891,
+    "ic95": {
+     "bajo": -17.820999999999913,
+     "alto": 15.495000000000118
+    }
+   },
+   "si": {
+    "medianaA": 1227,
+    "medianaX": 1229,
+    "diferencia": 2,
+    "ic95": {
+     "bajo": -19,
+     "alto": 30
+    }
+   },
+   "tbt": {
+    "medianaA": 0,
+    "medianaX": 0,
+    "diferencia": 0,
+    "ic95": {
+     "bajo": 0,
+     "alto": 0
+    }
+   },
+   "transferenciaTotal": {
+    "medianaA": 3079,
+    "medianaX": 23180,
+    "diferencia": 20101,
+    "ic95": {
+     "bajo": 20101,
+     "alto": 20101
+    }
+   },
+   "jsInicialTransferido": {
+    "medianaA": 1391,
+    "medianaX": 1391,
+    "diferencia": 0,
+    "ic95": {
+     "bajo": 0,
+     "alto": 0
+    }
+   }
+  },
+  "C": {
+   "tti": {
+    "medianaA": 1225.464,
+    "medianaX": 1223.927,
+    "diferencia": -1.5370000000000346,
+    "ic95": {
+     "bajo": -16.010999999999967,
+     "alto": 19.99700000000007
+    }
+   },
+   "fcp": {
+    "medianaA": 1225.464,
+    "medianaX": 1223.927,
+    "diferencia": -1.5370000000000346,
+    "ic95": {
+     "bajo": -16.010999999999967,
+     "alto": 19.99700000000007
+    }
+   },
+   "lcp": {
+    "medianaA": 1239.749,
+    "medianaX": 1239.678,
+    "diferencia": -0.07099999999991269,
+    "ic95": {
+     "bajo": -17.33400000000006,
+     "alto": 17.572000000000116
+    }
+   },
+   "si": {
+    "medianaA": 1227,
+    "medianaX": 1225,
+    "diferencia": -2,
+    "ic95": {
+     "bajo": -22,
+     "alto": 33
+    }
+   },
+   "tbt": {
+    "medianaA": 0,
+    "medianaX": 0,
+    "diferencia": 0,
+    "ic95": {
+     "bajo": 0,
+     "alto": 0
+    }
+   },
+   "transferenciaTotal": {
+    "medianaA": 3079,
+    "medianaX": 175771,
+    "diferencia": 172692,
+    "ic95": {
+     "bajo": 172692,
+     "alto": 172692
+    }
+   },
+   "jsInicialTransferido": {
+    "medianaA": 1391,
+    "medianaX": 1391,
+    "diferencia": 0,
+    "ic95": {
+     "bajo": 0,
+     "alto": 0
+    }
+   }
+  }
+ },
+ "estado": "Aprobado",
+ "corridas": {
+  "A": [
+   {
+    "fcp": 1261.647,
+    "lcp": 1277.557,
+    "si": 1263,
+    "tbt": 0,
+    "tti": 1261.647,
+    "transferenciaTotal": 3222,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1239.749,
+    "lcp": 1239.749,
+    "si": 1236,
+    "tbt": 0,
+    "tti": 1239.749,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1225.464,
+    "lcp": 1241.261,
+    "si": 1227,
+    "tbt": 0,
+    "tti": 1225.464,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1242.337,
+    "lcp": 1258.584,
+    "si": 1244,
+    "tbt": 0,
+    "tti": 1242.337,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1194.324,
+    "lcp": 1213.434,
+    "si": 1183,
+    "tbt": 0,
+    "tti": 1194.324,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1220.107,
+    "lcp": 1235.863,
+    "si": 1221,
+    "tbt": 0,
+    "tti": 1220.107,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1207.793,
+    "lcp": 1225.158,
+    "si": 1197,
+    "tbt": 0,
+    "tti": 1207.793,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1218.856,
+    "lcp": 1234.809,
+    "si": 1207,
+    "tbt": 0,
+    "tti": 1218.856,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1208.087,
+    "lcp": 1208.087,
+    "si": 1191,
+    "tbt": 0,
+    "tti": 1208.087,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1246.057,
+    "lcp": 1261.976,
+    "si": 1247,
+    "tbt": 0,
+    "tti": 1246.057,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1208.188,
+    "lcp": 1223.711,
+    "si": 1196,
+    "tbt": 0,
+    "tti": 1208.188,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1226.473,
+    "lcp": 1243.08,
+    "si": 1228,
+    "tbt": 0,
+    "tti": 1226.473,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1219.289,
+    "lcp": 1219.289,
+    "si": 1203,
+    "tbt": 0,
+    "tti": 1219.289,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1258.008,
+    "lcp": 1258.008,
+    "si": 1255,
+    "tbt": 0,
+    "tti": 1258.008,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   },
+   {
+    "fcp": 1229.822,
+    "lcp": 1246.562,
+    "si": 1231,
+    "tbt": 0,
+    "tti": 1229.822,
+    "transferenciaTotal": 3079,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": null,
+    "error": null
+   }
+  ],
+  "B": [
+   {
+    "fcp": 1239.961,
+    "lcp": 1239.961,
+    "si": 1237,
+    "tbt": 0,
+    "tti": 1239.961,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1913.8709999918938
+    },
+    "error": null
+   },
+   {
+    "fcp": 1247.817,
+    "lcp": 1263.26,
+    "si": 1249,
+    "tbt": 0,
+    "tti": 1247.817,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1926.3699999973178
+    },
+    "error": null
+   },
+   {
+    "fcp": 1226.106,
+    "lcp": 1226.106,
+    "si": 1209,
+    "tbt": 0,
+    "tti": 1226.106,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1896.2419999912381
+    },
+    "error": null
+   },
+   {
+    "fcp": 1238.897,
+    "lcp": 1238.897,
+    "si": 1236,
+    "tbt": 0,
+    "tti": 1238.897,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1909.6140000000596
+    },
+    "error": null
+   },
+   {
+    "fcp": 1207.376,
+    "lcp": 1223.378,
+    "si": 1195,
+    "tbt": 0,
+    "tti": 1207.376,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1895.6040000021458
+    },
+    "error": null
+   },
+   {
+    "fcp": 1228.741,
+    "lcp": 1228.741,
+    "si": 1212,
+    "tbt": 0,
+    "tti": 1228.741,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1896.0779999941587
+    },
+    "error": null
+   },
+   {
+    "fcp": 1219.877,
+    "lcp": 1235.676,
+    "si": 1221,
+    "tbt": 0,
+    "tti": 1219.877,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1893.7030000016093
+    },
+    "error": null
+   },
+   {
+    "fcp": 1243.549,
+    "lcp": 1259.848,
+    "si": 1245,
+    "tbt": 0,
+    "tti": 1243.549,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1936.4649999961257
+    },
+    "error": null
+   },
+   {
+    "fcp": 1210.936,
+    "lcp": 1227.846,
+    "si": 1199,
+    "tbt": 0,
+    "tti": 1210.936,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1905.0169999971986
+    },
+    "error": null
+   },
+   {
+    "fcp": 1240.653,
+    "lcp": 1240.653,
+    "si": 1238,
+    "tbt": 0,
+    "tti": 1240.653,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1918.5769999921322
+    },
+    "error": null
+   },
+   {
+    "fcp": 1226.726,
+    "lcp": 1226.726,
+    "si": 1224,
+    "tbt": 0,
+    "tti": 1226.726,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1897.5779999941587
+    },
+    "error": null
+   },
+   {
+    "fcp": 1231.266,
+    "lcp": 1247.134,
+    "si": 1232,
+    "tbt": 0,
+    "tti": 1231.266,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1912.9490000009537
+    },
+    "error": null
+   },
+   {
+    "fcp": 1229.126,
+    "lcp": 1245.996,
+    "si": 1231,
+    "tbt": 0,
+    "tti": 1229.126,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1915.5210000053048
+    },
+    "error": null
+   },
+   {
+    "fcp": 1223.975,
+    "lcp": 1223.975,
+    "si": 1207,
+    "tbt": 0,
+    "tti": 1223.975,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1892.417999997735
+    },
+    "error": null
+   },
+   {
+    "fcp": 1228.051,
+    "lcp": 1243.721,
+    "si": 1229,
+    "tbt": 0,
+    "tti": 1228.051,
+    "transferenciaTotal": 23180,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 18871,
+     "fin": 1906.9560000002384
+    },
+    "error": null
+   }
+  ],
+  "C": [
+   {
+    "fcp": 1219.845,
+    "lcp": 1238.004,
+    "si": 1222,
+    "tbt": 0,
+    "tti": 1219.845,
+    "transferenciaTotal": 175914,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2726.0109999999404
+    },
+    "error": null
+   },
+   {
+    "fcp": 1223.738,
+    "lcp": 1239.678,
+    "si": 1225,
+    "tbt": 0,
+    "tti": 1223.738,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2718.4229999929667
+    },
+    "error": null
+   },
+   {
+    "fcp": 1231.897,
+    "lcp": 1248.226,
+    "si": 1233,
+    "tbt": 0,
+    "tti": 1231.897,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2731.1069999933243
+    },
+    "error": null
+   },
+   {
+    "fcp": 1244.494,
+    "lcp": 1261.046,
+    "si": 1246,
+    "tbt": 0,
+    "tti": 1244.494,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2749.575999997556
+    },
+    "error": null
+   },
+   {
+    "fcp": 1218.987,
+    "lcp": 1236.217,
+    "si": 1207,
+    "tbt": 0,
+    "tti": 1218.987,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2719.036000005901
+    },
+    "error": null
+   },
+   {
+    "fcp": 1239.286,
+    "lcp": 1255.248,
+    "si": 1241,
+    "tbt": 0,
+    "tti": 1239.286,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2726.4680000022054
+    },
+    "error": null
+   },
+   {
+    "fcp": 1222.317,
+    "lcp": 1222.317,
+    "si": 1206,
+    "tbt": 0,
+    "tti": 1222.317,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2704.7739999964833
+    },
+    "error": null
+   },
+   {
+    "fcp": 1234.073,
+    "lcp": 1250.257,
+    "si": 1235,
+    "tbt": 0,
+    "tti": 1234.073,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2725.908999994397
+    },
+    "error": null
+   },
+   {
+    "fcp": 1252.276,
+    "lcp": 1268.373,
+    "si": 1254,
+    "tbt": 0,
+    "tti": 1252.276,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2737.314999997616
+    },
+    "error": null
+   },
+   {
+    "fcp": 1211.396,
+    "lcp": 1211.396,
+    "si": 1195,
+    "tbt": 0,
+    "tti": 1211.396,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2694.7690000012517
+    },
+    "error": null
+   },
+   {
+    "fcp": 1221.099,
+    "lcp": 1238.123,
+    "si": 1223,
+    "tbt": 0,
+    "tti": 1221.099,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2725.195999994874
+    },
+    "error": null
+   },
+   {
+    "fcp": 1223.927,
+    "lcp": 1223.927,
+    "si": 1207,
+    "tbt": 0,
+    "tti": 1223.927,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2705.076000005007
+    },
+    "error": null
+   },
+   {
+    "fcp": 1216.529,
+    "lcp": 1216.529,
+    "si": 1200,
+    "tbt": 0,
+    "tti": 1216.529,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2703.3060000017285
+    },
+    "error": null
+   },
+   {
+    "fcp": 1243.295,
+    "lcp": 1243.295,
+    "si": 1240,
+    "tbt": 0,
+    "tti": 1243.295,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2735.8460000008345
+    },
+    "error": null
+   },
+   {
+    "fcp": 1242.73,
+    "lcp": 1242.73,
+    "si": 1240,
+    "tbt": 0,
+    "tti": 1242.73,
+    "transferenciaTotal": 175771,
+    "jsInicialTransferido": 1391,
+    "pesosDescargados": {
+     "transferSize": 171462,
+     "fin": 2727.5900000035763
+    },
+    "error": null
+   }
+  ]
+ }
+}

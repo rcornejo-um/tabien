@@ -1,0 +1,264 @@
+{
+ "hipotesis": "H2: p95 de inferencia TS ≤ 10 ms por nota",
+ "perfil": {
+  "cpu": 4,
+  "red": {
+   "latencia": 150,
+   "bajadaKbps": 1638.4,
+   "subidaKbps": 750
+  },
+  "pantalla": {
+   "ancho": 412,
+   "alto": 823,
+   "factor": 1.75,
+   "movil": true
+  }
+ },
+ "navegador": "Chrome/149.0.7827.201",
+ "limiteP95Ms": 10,
+ "filas": [
+  {
+   "modo": "libre",
+   "corrida": 0,
+   "worker": {
+    "p50": 0.01499999314546585,
+    "p95": 0.030000001192092896,
+    "p99": 0.04855000369250793,
+    "max": 0.21000000089406967,
+    "mediaMs": 0.015025641026841851,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.01000000536441803,
+    "p95": 0.025000005960464478,
+    "p99": 0.044999994337558746,
+    "max": 0.24499999731779099,
+    "mediaMs": 0.014062271062489395,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [],
+   "notas": 546,
+   "repeticiones": 5
+  },
+  {
+   "modo": "libre",
+   "corrida": 1,
+   "worker": {
+    "p50": 0.01000000536441803,
+    "p95": 0.025000005960464478,
+    "p99": 0.04500000178813934,
+    "max": 0.5150000005960464,
+    "mediaMs": 0.014556776554811569,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.01000000536441803,
+    "p95": 0.02499999850988388,
+    "p99": 0.04499999962747097,
+    "max": 0.13499999791383743,
+    "mediaMs": 0.014032967033840361,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [],
+   "notas": 546,
+   "repeticiones": 5
+  },
+  {
+   "modo": "libre",
+   "corrida": 2,
+   "worker": {
+    "p50": 0.01000000536441803,
+    "p95": 0.025000005960464478,
+    "p99": 0.03999999910593033,
+    "max": 0.13499999791383743,
+    "mediaMs": 0.014197802199767186,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.01000000536441803,
+    "p95": 0.02499999850988388,
+    "p99": 0.03855000048875827,
+    "max": 0.19500000029802322,
+    "mediaMs": 0.014084249085340745,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [],
+   "notas": 546,
+   "repeticiones": 5
+  },
+  {
+   "modo": "pagina-4x",
+   "corrida": 0,
+   "worker": {
+    "p50": 0.01499999314546585,
+    "p95": 0.025000005960464478,
+    "p99": 0.04999999701976776,
+    "max": 0.2149999961256981,
+    "mediaMs": 0.014565934066152399,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.01499999314546585,
+    "p95": 0.40275000333785876,
+    "p99": 0.5949999988079071,
+    "max": 1.6950000002980232,
+    "mediaMs": 0.05598351648384398,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [],
+   "notas": 546,
+   "repeticiones": 5
+  },
+  {
+   "modo": "pagina-4x",
+   "corrida": 1,
+   "worker": {
+    "p50": 0.01000000536441803,
+    "p95": 0.025000005960464478,
+    "p99": 0.048549998402595704,
+    "max": 0.4299999997019768,
+    "mediaMs": 0.014637362637690136,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.015000000596046448,
+    "p95": 0.4299999997019768,
+    "p99": 0.6050000041723251,
+    "max": 0.9150000065565109,
+    "mediaMs": 0.05838278388474887,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [],
+   "notas": 546,
+   "repeticiones": 5
+  },
+  {
+   "modo": "pagina-4x",
+   "corrida": 2,
+   "worker": {
+    "p50": 0.01000000536441803,
+    "p95": 0.02499999850988388,
+    "p99": 0.04355000101029891,
+    "max": 0.35999999940395355,
+    "mediaMs": 0.014250915751352415,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.015000000596046448,
+    "p95": 0.4127500012516962,
+    "p99": 0.5949999988079071,
+    "max": 1.3200000002980232,
+    "mediaMs": 0.05786080586113336,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [],
+   "notas": 546,
+   "repeticiones": 5
+  },
+  {
+   "modo": "todo-4x",
+   "corrida": 0,
+   "worker": {
+    "p50": 0.01000000536441803,
+    "p95": 0.025000005960464478,
+    "p99": 0.04500000178813934,
+    "max": 0.14500000327825546,
+    "mediaMs": 0.014448717948827114,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.015000000596046448,
+    "p95": 0.4077499985694872,
+    "p99": 0.5949999988079071,
+    "max": 0.994999997317791,
+    "mediaMs": 0.057655677657860976,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [
+    {
+     "tipo": "worker",
+     "ok": false,
+     "error": "Operation is only supported for pages, not workers (-32000)"
+    }
+   ],
+   "notas": 546,
+   "repeticiones": 5
+  },
+  {
+   "modo": "todo-4x",
+   "corrida": 1,
+   "worker": {
+    "p50": 0.01000000536441803,
+    "p95": 0.025000005960464478,
+    "p99": 0.048549998402595704,
+    "max": 0.17999999970197678,
+    "mediaMs": 0.014510989011753173,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.01499999314546585,
+    "p95": 0.4100000005215406,
+    "p99": 0.5985499954223634,
+    "max": 1.285000003874302,
+    "mediaMs": 0.05644139194171944,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [
+    {
+     "tipo": "worker",
+     "ok": false,
+     "error": "Operation is only supported for pages, not workers (-32000)"
+    }
+   ],
+   "notas": 546,
+   "repeticiones": 5
+  },
+  {
+   "modo": "todo-4x",
+   "corrida": 2,
+   "worker": {
+    "p50": 0.01000000536441803,
+    "p95": 0.025000005960464478,
+    "p99": 0.03999999910593033,
+    "max": 0.1899999976158142,
+    "mediaMs": 0.014216117214261394,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "principal": {
+    "p50": 0.01499999314546585,
+    "p95": 0.42500000447034836,
+    "p99": 0.6000000014901161,
+    "max": 0.6749999970197678,
+    "mediaMs": 0.057190476191458686,
+    "resolucionMs": 0.004999995231628418,
+    "aisladoOrigen": true
+   },
+   "intentosWorker": [
+    {
+     "tipo": "worker",
+     "ok": false,
+     "error": "Operation is only supported for pages, not workers (-32000)"
+    }
+   ],
+   "notas": 546,
+   "repeticiones": 5
+  }
+ ]
+}
