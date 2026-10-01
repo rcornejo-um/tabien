@@ -1,0 +1,21 @@
+{
+ "generador": "sintetico-v2",
+ "uso_permitido": "pipeline, motor de patrones, simulación de rutas",
+ "uso_prohibido": "reportar desempeño de comprensión de texto",
+ "archivos": {
+  "d0_v2.jsonl": {
+   "sha256": "dbf2dca6e859e296cd7e45528db56d65fff4b3d47cb1979076f67b0392ab8ef8",
+   "filas": 2400
+  },
+  "d0_v2_efectos.json": {
+   "sha256": "972b9749c25741e214f6e977d09c5d5b0f1a15ad9deee258aa2d895c311582ca"
+  },
+  "d0_v2_largo.jsonl": {
+   "sha256": "473177cfac525429ddb48df64dbb70b594daac88673998a306857d51bcf0d163",
+   "filas": 3600
+  },
+  "d0_v2_largo_efectos.json": {
+   "sha256": "a9b0dc4c3a9d871645f7ced4e91504340a350184c61cc86c658d291d80a5705b"
+  }
+ }
+}
