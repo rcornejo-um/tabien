@@ -1,0 +1,100 @@
+{"id": "m000", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["alimentacion"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m001", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m002", "anotador": "generador", "segmento": "sin_tema", "etiquetas": [], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m003", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["animo", "estudio_trabajo"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m004", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["alimentacion", "estres", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m005", "anotador": "generador", "segmento": "corta", "etiquetas": [], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m006", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["estres", "estudio_trabajo"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m007", "anotador": "generador", "segmento": "corta", "etiquetas": ["descanso", "ejercicio"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m008", "anotador": "generador", "segmento": "multitema", "etiquetas": ["animo", "social", "sueno"], "tono": -2, "ambigua": false, "riesgo": false}
+{"id": "m009", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["ejercicio"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m010", "anotador": "generador", "segmento": "multitema", "etiquetas": ["alimentacion", "hidratacion", "sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m011", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["alimentacion", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m012", "anotador": "generador", "segmento": "multitema", "etiquetas": ["descanso", "ejercicio", "estudio_trabajo", "hidratacion"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m013", "anotador": "generador", "segmento": "cualquiera", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m014", "anotador": "generador", "segmento": "corta", "etiquetas": ["social"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m015", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["pantallas"], "tono": -2, "ambigua": false, "riesgo": false}
+{"id": "m016", "anotador": "generador", "segmento": "corta", "etiquetas": ["alimentacion"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m017", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["alimentacion"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m018", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["ejercicio", "pantallas"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m019", "anotador": "generador", "segmento": "corta", "etiquetas": ["estres"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m020", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["ejercicio", "social"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m021", "anotador": "generador", "segmento": "multitema", "etiquetas": ["animo", "estudio_trabajo", "hidratacion", "social"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m022", "anotador": "generador", "segmento": "multitema", "etiquetas": ["descanso", "pantallas", "sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m023", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["ejercicio", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m024", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["social"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m025", "anotador": "generador", "segmento": "multitema", "etiquetas": ["animo", "ejercicio", "estres"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m026", "anotador": "generador", "segmento": "multitema", "etiquetas": ["animo", "descanso", "ejercicio", "estudio_trabajo", "social"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m027", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["animo"], "tono": 2, "ambigua": false, "riesgo": false}
+{"id": "m028", "anotador": "generador", "segmento": "corta", "etiquetas": ["estres"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m029", "anotador": "generador", "segmento": "corta", "etiquetas": ["animo"], "tono": 2, "ambigua": false, "riesgo": false}
+{"id": "m030", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["animo", "descanso", "estres", "sueno"], "tono": -2, "ambigua": false, "riesgo": false}
+{"id": "m031", "anotador": "generador", "segmento": "multitema", "etiquetas": ["animo", "estudio_trabajo", "social", "sueno"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m032", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["alimentacion", "pantallas", "social"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m033", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["social", "sueno"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m034", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["descanso", "social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m035", "anotador": "generador", "segmento": "corta", "etiquetas": ["ejercicio", "social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m036", "anotador": "generador", "segmento": "sin_tema", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m037", "anotador": "generador", "segmento": "sin_tema", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m038", "anotador": "generador", "segmento": "sin_tema", "etiquetas": [], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m039", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["estres", "estudio_trabajo", "pantallas"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m040", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["descanso", "ejercicio", "social", "sueno"], "tono": 2, "ambigua": false, "riesgo": false}
+{"id": "m041", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["estres"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m042", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["estudio_trabajo"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m043", "anotador": "generador", "segmento": "multitema", "etiquetas": ["alimentacion", "estudio_trabajo", "social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m044", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["estudio_trabajo", "pantallas", "sueno"], "tono": -2, "ambigua": false, "riesgo": false}
+{"id": "m045", "anotador": "generador", "segmento": "multitema", "etiquetas": ["estudio_trabajo", "pantallas", "social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m046", "anotador": "generador", "segmento": "multitema", "etiquetas": ["alimentacion", "animo", "ejercicio"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m047", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["descanso", "ejercicio"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m048", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["estudio_trabajo"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m049", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["animo", "ejercicio", "sueno"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m050", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["estres"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m051", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["social"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m052", "anotador": "generador", "segmento": "corta", "etiquetas": ["ejercicio"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m053", "anotador": "generador", "segmento": "multitema", "etiquetas": ["alimentacion", "ejercicio", "social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m054", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["animo", "estudio_trabajo", "social"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m055", "anotador": "generador", "segmento": "multitema", "etiquetas": ["alimentacion", "estudio_trabajo", "social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m056", "anotador": "generador", "segmento": "corta", "etiquetas": ["hidratacion"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m057", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["alimentacion", "ejercicio", "estudio_trabajo", "hidratacion"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m058", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["animo", "descanso", "sueno"], "tono": 2, "ambigua": false, "riesgo": false}
+{"id": "m059", "anotador": "generador", "segmento": "chilenismo", "etiquetas": [], "tono": 2, "ambigua": false, "riesgo": false}
+{"id": "m060", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m061", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["alimentacion", "animo"], "tono": 2, "ambigua": false, "riesgo": false}
+{"id": "m062", "anotador": "generador", "segmento": "multitema", "etiquetas": ["alimentacion", "social", "sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m063", "anotador": "generador", "segmento": "multitema", "etiquetas": ["ejercicio", "pantallas", "social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m064", "anotador": "generador", "segmento": "corta", "etiquetas": ["estudio_trabajo"], "tono": 2, "ambigua": false, "riesgo": false}
+{"id": "m065", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m066", "anotador": "generador", "segmento": "multitema", "etiquetas": ["animo", "ejercicio", "social"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m067", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["alimentacion", "ejercicio"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m068", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["alimentacion", "ejercicio", "social"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m069", "anotador": "generador", "segmento": "corta", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m070", "anotador": "generador", "segmento": "multitema", "etiquetas": ["alimentacion", "animo", "estres", "estudio_trabajo"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m071", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["ejercicio", "social"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m072", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m073", "anotador": "generador", "segmento": "corta", "etiquetas": ["ejercicio"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m074", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["alimentacion"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m075", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["estres", "estudio_trabajo"], "tono": -2, "ambigua": false, "riesgo": false}
+{"id": "m076", "anotador": "generador", "segmento": "sin_tema", "etiquetas": [], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m077", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["alimentacion"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m078", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["social", "sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m079", "anotador": "generador", "segmento": "sin_tema", "etiquetas": [], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m080", "anotador": "generador", "segmento": "corta", "etiquetas": ["ejercicio", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m081", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["alimentacion", "animo", "descanso", "ejercicio", "social"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m082", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["animo"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m083", "anotador": "generador", "segmento": "multitema", "etiquetas": ["descanso", "ejercicio", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m084", "anotador": "generador", "segmento": "corta", "etiquetas": ["estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m085", "anotador": "generador", "segmento": "corta", "etiquetas": ["animo"], "tono": -2, "ambigua": false, "riesgo": false}
+{"id": "m086", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m087", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["estudio_trabajo", "hidratacion", "sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m088", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["estres"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m089", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["estudio_trabajo", "sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m090", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["alimentacion", "social", "sueno"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m091", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["animo"], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m092", "anotador": "generador", "segmento": "sin_tema", "etiquetas": [], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m093", "anotador": "generador", "segmento": "sin_tema", "etiquetas": [], "tono": -1, "ambigua": false, "riesgo": false}
+{"id": "m094", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["pantallas"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m095", "anotador": "generador", "segmento": "sin_tildes", "etiquetas": ["estudio_trabajo"], "tono": -2, "ambigua": false, "riesgo": false}
+{"id": "m096", "anotador": "generador", "segmento": "corta", "etiquetas": ["descanso", "ejercicio"], "tono": 0, "ambigua": false, "riesgo": false}
+{"id": "m097", "anotador": "generador", "segmento": "cualquiera", "etiquetas": ["descanso", "estres"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m098", "anotador": "generador", "segmento": "corta", "etiquetas": ["animo"], "tono": 1, "ambigua": false, "riesgo": false}
+{"id": "m099", "anotador": "generador", "segmento": "chilenismo", "etiquetas": ["sueno"], "tono": 0, "ambigua": false, "riesgo": false}

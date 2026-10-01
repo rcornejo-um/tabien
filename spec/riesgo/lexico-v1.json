@@ -1,0 +1,102 @@
+{
+ "version": "riesgo-v1-prototipo",
+ "estado_revision": "SIN revisión clínica. Prototipo: no usar con personas reales hasta que una persona con formación en salud mental lo revise y apruebe.",
+ "frontera": "(?<![a-z0-9ñ])(?:PATRON)(?![a-z0-9ñ])",
+ "excepciones": [
+  {
+   "id": "morir-de-idiomatico",
+   "patron": "(?:morir(?:me)?|muero|muriendo|muert[oa]) de (?:la )?(?:risa|verguenza|sueno|ganas|hambre|calor|frio|lata|nervios|sed|aburrimiento|cansancio|amor|envidia)",
+   "nota": "\"me quiero morir de vergüenza\", \"me muero de sueño\". NO incluye \"de pena\" (tristeza)."
+  },
+  {
+   "id": "matar-de-risa",
+   "patron": "matarme de (?:la )?risa|me mate de (?:la )?risa"
+  },
+  {
+   "id": "pego-enfermedad-o-cosa",
+   "patron": "me pego (?:un|una) (?:resfrio|resfriado|gripe|virus|siesta|carrete|bajon)|me pego el (?:sol|bajon|virus|covid|resfrio)|me pego la (?:gripe|lata|flojera|cancion)"
+  }
+ ],
+ "reglas": [
+  {
+   "id": "querer-morir",
+   "categoria": "suicidio_autolesion",
+   "patron": "(?:quiero|quisiera|ganas de|deseo) morir(?:me)?"
+  },
+  {
+   "id": "mejor-muerto",
+   "categoria": "suicidio_autolesion",
+   "patron": "(?:prefiero|mejor|ojala) (?:estar |estuviera )?muert[oa]"
+  },
+  {
+   "id": "no-querer-vivir",
+   "categoria": "suicidio_autolesion",
+   "patron": "no (?:quiero|quisiera) (?:seguir )?(?:vivir|existir)|no vale la pena (?:vivir|seguir)|sin razones? para vivir"
+  },
+  {
+   "id": "matarme",
+   "categoria": "suicidio_autolesion",
+   "patron": "matarme|me (?:voy a|quiero|podria) matar|me mato yo"
+  },
+  {
+   "id": "quitarse-la-vida",
+   "categoria": "suicidio_autolesion",
+   "patron": "quitarme la vida|acabar con (?:todo|mi vida)|terminar con mi vida"
+  },
+  {
+   "id": "suicidio",
+   "categoria": "suicidio_autolesion",
+   "patron": "suicid[a-zñ]*"
+  },
+  {
+   "id": "desaparecer",
+   "categoria": "suicidio_autolesion",
+   "patron": "desaparecer para siempre|no (?:quiero|quisiera) despertar|dormir y no despertar|dormir para siempre"
+  },
+  {
+   "id": "autolesion",
+   "categoria": "suicidio_autolesion",
+   "patron": "cortarme|me corte (?:los brazos|el brazo|las munecas|la muneca|las piernas)|hacerme dano|autolesion[a-zñ]*|lastimarme"
+  },
+  {
+   "id": "carga-para-otros",
+   "categoria": "suicidio_autolesion",
+   "patron": "(?:estarian|estaria|vivirian) mejor sin mi|nadie me extranaria|soy una carga"
+  },
+  {
+   "id": "pastillas",
+   "categoria": "suicidio_autolesion",
+   "patron": "(?:tomarme|tomar) todas las pastillas|pastillas para (?:no despertar|morir)"
+  },
+  {
+   "id": "violencia-fisica",
+   "categoria": "violencia",
+   "patron": "me (?:golpea|golpeo|golpearon|pega|pego|pegaron|maltrata|maltrato|ahorca|ahorco)"
+  },
+  {
+   "id": "violencia-amenaza",
+   "categoria": "violencia",
+   "patron": "me amenaza|me amenazo|tengo miedo de (?:mi|el|la) (?:pareja|pololo|polola|marido|esposo|esposa|papa|mama|padrastro|madrastra)"
+  },
+  {
+   "id": "violencia-sexual",
+   "categoria": "violencia",
+   "patron": "abuso sexual|me violaron|me violo|abusaron de mi|abuso de mi"
+  },
+  {
+   "id": "violencia-nombrada",
+   "categoria": "violencia",
+   "patron": "violencia (?:intrafamiliar|en la pareja|domestica)"
+  },
+  {
+   "id": "panico",
+   "categoria": "crisis",
+   "patron": "(?:ataque|crisis) de (?:panico|angustia|ansiedad)|no puedo respirar"
+  },
+  {
+   "id": "no-puedo-mas-vida",
+   "categoria": "crisis",
+   "patron": "no (?:puedo|doy) mas con mi vida|no aguanto mas (?:vivir|mi vida)"
+  }
+ ]
+}

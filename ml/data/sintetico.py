@@ -38,7 +38,7 @@ from dataclasses import asdict, dataclass, field
 from datetime import date, timedelta
 from pathlib import Path
 
-VERSION = "sintetico-v2"
+VERSION = "sintetico-v2.1"  # v2.1: etiquetas alineadas con la guía v1.1 (decisions/005)
 
 ETIQUETAS = [
     "sueno", "estres", "alimentacion", "ejercicio", "animo",
@@ -71,7 +71,7 @@ SUENO: F = {
     ],
     "bien": [
         ("dormí bien", ()), ("dormí {h} horas", ()), ("dormí como tronco", ()),
-        ("descansé harto anoche", ("descanso",)), ("me acosté temprano", ()),
+        ("descansé harto anoche", ()), ("me acosté temprano", ()),
     ],
     "bien_cl": [("dormí bacán", ()), ("dormí la raja", ()), ("dormí del uno", ())],
 }
@@ -86,7 +86,7 @@ ESTRES: F = {
         ("ando chato", ()), ("estoy reventado", ()), ("ando con los nervios de punta", ()),
         ("estoy hasta el pico", ()), ("me tiene choreado todo", ("animo",)),
     ],
-    "bajo": [("día tranquilo, sin estrés", ()), ("me sentí relajado", ("descanso",))],
+    "bajo": [("día tranquilo, sin estrés", ()), ("me sentí relajado", ())],
     "bajo_cl": [("día tranqui", ()), ("todo piola hoy", ())],
 }
 

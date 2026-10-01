@@ -1,0 +1,100 @@
+{"id": "m000", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m001", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m002", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m003", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "estudio_trabajo"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m004", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "estres", "estudio_trabajo"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m005", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m006", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "estudio_trabajo"], "tono": 1, "ambigua": true, "riesgo": false, "comentario": ""}
+{"id": "m007", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["descanso", "ejercicio"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m008", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "social", "sueno"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m009", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m010", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "hidratacion", "sueno"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m011", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m012", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["descanso", "ejercicio", "estudio_trabajo", "hidratacion"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m013", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m014", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["social"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m015", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["pantallas"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m016", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m017", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m018", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio", "pantallas"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m019", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estres"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m020", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio", "social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m021", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "estudio_trabajo", "hidratacion", "social"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m022", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["pantallas", "sueno"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m023", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m024", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["social"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m025", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "ejercicio", "estres"], "tono": -2, "ambigua": true, "riesgo": false, "comentario": ""}
+{"id": "m026", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "descanso", "ejercicio", "estudio_trabajo", "social"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m027", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo"], "tono": 2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m028", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estres"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m029", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m030", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "descanso", "estres", "sueno"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m031", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "estudio_trabajo", "social", "sueno"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m032", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "pantallas", "social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m033", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["social", "sueno"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m034", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["descanso", "social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m035", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio"], "tono": 0, "ambigua": true, "riesgo": false, "comentario": ""}
+{"id": "m036", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m037", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m038", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m039", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estres", "estudio_trabajo", "pantallas"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m040", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio", "social", "sueno"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m041", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo"], "tono": 1, "ambigua": true, "riesgo": false, "comentario": ""}
+{"id": "m042", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m043", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "estudio_trabajo", "social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m044", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo", "pantallas", "sueno"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m045", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo", "pantallas", "social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m046", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "animo", "ejercicio"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m047", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["descanso", "ejercicio"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m048", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m049", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "ejercicio", "sueno"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m050", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estres"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m051", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["social"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m052", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m053", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "ejercicio", "social"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m054", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "estudio_trabajo", "social"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m055", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "estudio_trabajo", "social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m056", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["hidratacion"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m057", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "ejercicio", "estudio_trabajo", "hidratacion"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m058", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "sueno"], "tono": 2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m059", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m060", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m061", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "animo"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m062", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "social", "sueno"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m063", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio", "pantallas", "social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m064", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m065", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["sueno"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m066", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "ejercicio", "social"], "tono": 2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m067", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "ejercicio"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m068", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "ejercicio", "social"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m069", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m070", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "animo", "estres", "estudio_trabajo"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m071", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio", "social"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m072", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["sueno"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m073", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m074", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m075", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estres", "estudio_trabajo"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m076", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m077", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m078", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["social", "sueno"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m079", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m080", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["ejercicio", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m081", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "animo", "descanso", "ejercicio", "social"], "tono": 2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m082", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m083", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["descanso", "ejercicio", "estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m084", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m085", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m086", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["sueno"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m087", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo", "hidratacion", "sueno"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m088", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estres"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m089", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo", "sueno"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m090", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["alimentacion", "social", "sueno"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m091", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo"], "tono": -2, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m092", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m093", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": [], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m094", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["pantallas"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m095", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["estudio_trabajo"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m096", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["descanso", "ejercicio"], "tono": 0, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m097", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo", "descanso"], "tono": 1, "ambigua": true, "riesgo": false, "comentario": ""}
+{"id": "m098", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["animo"], "tono": 1, "ambigua": false, "riesgo": false, "comentario": ""}
+{"id": "m099", "anotador": "claude-guia-v1", "guia": "v1", "etiquetas": ["sueno"], "tono": -1, "ambigua": false, "riesgo": false, "comentario": ""}

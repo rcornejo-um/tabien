@@ -1,0 +1,41 @@
+{
+  "version": "riesgo-v1-prototipo",
+  "descripcion": "Entrada: texto original. Esperado: categorías activadas (vacío = no se activa). Escrito a mano.",
+  "preparacion": [
+    {"id": "tildes-alargadas-mayus", "entrada": "QUIERO MORIIIIR 😢", "esperado": "quiero morir"},
+    {"id": "ñ", "entrada": "Mañana, ¿sí?", "esperado": "mañana si"},
+    {"id": "vacio", "entrada": "", "esperado": ""}
+  ],
+  "casos": [
+    {"id": "querer-morir", "entrada": "Quiero morirme", "esperado": ["suicidio_autolesion"]},
+    {"id": "querer-morir-alargado", "entrada": "QUIERO MORIIIIR 😢", "esperado": ["suicidio_autolesion"]},
+    {"id": "no-quiero-vivir", "entrada": "ya no quiero seguir viviendo así... no quiero vivir", "esperado": ["suicidio_autolesion"]},
+    {"id": "pensar-en-matarme", "entrada": "a veces pienso en matarme", "esperado": ["suicidio_autolesion"]},
+    {"id": "suicidio", "entrada": "tengo pensamientos suicidas", "esperado": ["suicidio_autolesion"]},
+    {"id": "sin-tildes", "entrada": "estarian mejor sin mi", "esperado": ["suicidio_autolesion"]},
+    {"id": "autolesion", "entrada": "volví a cortarme", "esperado": ["suicidio_autolesion"]},
+    {"id": "desaparecer", "entrada": "quisiera desaparecer para siempre", "esperado": ["suicidio_autolesion"]},
+    {"id": "acabar-con-todo", "entrada": "quiero acabar con todo", "esperado": ["suicidio_autolesion"]},
+    {"id": "morir-de-pena-SI", "entrada": "me quiero morir de pena", "esperado": ["suicidio_autolesion"]},
+    {"id": "violencia-pareja", "entrada": "mi pololo me pega cuando se enoja", "esperado": ["violencia"]},
+    {"id": "violencia-miedo", "entrada": "tengo miedo de mi pareja", "esperado": ["violencia"]},
+    {"id": "panico", "entrada": "me dio un ataque de pánico en la micro", "esperado": ["crisis"]},
+    {"id": "no-puedo-mas-con-mi-vida", "entrada": "no doy más con mi vida", "esperado": ["crisis"]},
+    {"id": "dos-categorias", "entrada": "me golpeó y ahora quiero morir", "esperado": ["suicidio_autolesion", "violencia"]},
+    {"id": "falsa-alarma-matar-estudiando", "entrada": "me voy a matar estudiando para el certamen", "esperado": ["suicidio_autolesion"], "nota": "falsa alarma aceptada"},
+    {"id": "falsa-alarma-no-quiero-morir", "entrada": "no quiero morir de estrés jaja", "esperado": ["suicidio_autolesion"], "nota": "falsa alarma aceptada"},
+    {"id": "falsa-alarma-dormir-para-siempre", "entrada": "terminé las pruebas, quiero dormir para siempre", "esperado": ["suicidio_autolesion"], "nota": "falsa alarma aceptada"},
+
+    {"id": "NO-muero-de-sueno", "entrada": "me muero de sueño 😴", "esperado": []},
+    {"id": "NO-morir-de-verguenza", "entrada": "me quiero morir de vergüenza jajaja", "esperado": []},
+    {"id": "NO-muerto-de-cansancio", "entrada": "estoy muerto de cansancio", "esperado": []},
+    {"id": "NO-matar-de-risa", "entrada": "casi me mato de la risa, digo, me maté de la risa", "esperado": []},
+    {"id": "NO-harta-pega", "entrada": "harta pega y cero ejercicio 😩", "esperado": []},
+    {"id": "NO-me-pego-resfrio", "entrada": "me pegó un resfrío", "esperado": []},
+    {"id": "NO-me-pegue-siesta", "entrada": "me pegué una siesta bacán", "esperado": []},
+    {"id": "NO-no-doy-mas-de-sueno", "entrada": "no doy más de sueño", "esperado": []},
+    {"id": "NO-la-prueba-me-mato", "entrada": "la prueba me mató", "esperado": []},
+    {"id": "NO-dia-normal", "entrada": "dormí pésimo, harta pega", "esperado": []},
+    {"id": "NO-vacio", "entrada": "", "esperado": []}
+  ]
+}

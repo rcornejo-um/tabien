@@ -1,0 +1,118 @@
+{
+ "notas_comunes": 100,
+ "notas_evaluadas": 100,
+ "excluidas_por_riesgo": [],
+ "umbral_kappa": 0.6,
+ "por_etiqueta": {
+  "sueno": {
+   "kappa": 1.0,
+   "acuerdo_simple": 1.0,
+   "positivos_a": 19,
+   "positivos_b": 19,
+   "solo_a": [],
+   "solo_b": [],
+   "bajo_umbral": false
+  },
+  "estres": {
+   "kappa": 0.853,
+   "acuerdo_simple": 0.97,
+   "positivos_a": 13,
+   "positivos_b": 10,
+   "solo_a": [
+    "m006",
+    "m041",
+    "m097"
+   ],
+   "solo_b": [],
+   "bajo_umbral": false
+  },
+  "alimentacion": {
+   "kappa": 1.0,
+   "acuerdo_simple": 1.0,
+   "positivos_a": 21,
+   "positivos_b": 21,
+   "solo_a": [],
+   "solo_b": [],
+   "bajo_umbral": false
+  },
+  "ejercicio": {
+   "kappa": 1.0,
+   "acuerdo_simple": 1.0,
+   "positivos_a": 26,
+   "positivos_b": 26,
+   "solo_a": [],
+   "solo_b": [],
+   "bajo_umbral": false
+  },
+  "animo": {
+   "kappa": 0.914,
+   "acuerdo_simple": 0.97,
+   "positivos_a": 21,
+   "positivos_b": 24,
+   "solo_a": [],
+   "solo_b": [
+    "m006",
+    "m041",
+    "m097"
+   ],
+   "bajo_umbral": false
+  },
+  "social": {
+   "kappa": 0.975,
+   "acuerdo_simple": 0.99,
+   "positivos_a": 28,
+   "positivos_b": 27,
+   "solo_a": [
+    "m035"
+   ],
+   "solo_b": [],
+   "bajo_umbral": false
+  },
+  "estudio_trabajo": {
+   "kappa": 1.0,
+   "acuerdo_simple": 1.0,
+   "positivos_a": 27,
+   "positivos_b": 27,
+   "solo_a": [],
+   "solo_b": [],
+   "bajo_umbral": false
+  },
+  "pantallas": {
+   "kappa": 1.0,
+   "acuerdo_simple": 1.0,
+   "positivos_a": 9,
+   "positivos_b": 9,
+   "solo_a": [],
+   "solo_b": [],
+   "bajo_umbral": false
+  },
+  "hidratacion": {
+   "kappa": 1.0,
+   "acuerdo_simple": 1.0,
+   "positivos_a": 6,
+   "positivos_b": 6,
+   "solo_a": [],
+   "solo_b": [],
+   "bajo_umbral": false
+  },
+  "descanso": {
+   "kappa": 0.853,
+   "acuerdo_simple": 0.97,
+   "positivos_a": 13,
+   "positivos_b": 10,
+   "solo_a": [
+    "m022",
+    "m040",
+    "m058"
+   ],
+   "solo_b": [],
+   "bajo_umbral": false
+  }
+ },
+ "tono": {
+  "kappa_ponderado_cuadratico": 0.576,
+  "acuerdo_exacto": 0.45,
+  "mae": 0.64
+ },
+ "etiquetas_bajo_umbral": []
+}

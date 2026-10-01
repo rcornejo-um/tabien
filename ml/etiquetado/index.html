@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Tabien · etiquetado</title>
+<style>
+  :root {
+    --fondo: #f6f7ff; --superficie: #fff; --texto: #14172b; --suave: #4a4f6b;
+    --acento: #0b6e85; --acento-texto: #fff; --borde: #d7dbf0; --marca: #e3f6fa; --alerta: #a3122a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #070b1a; --superficie: #10162e; --texto: #e9ecff; --suave: #a9b0d6;
+      --acento: #38e1ff; --acento-texto: #070b1a; --borde: #26305a; --marca: #12304a; --alerta: #ff8fa3;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fondo); color: var(--texto); font: 1rem/1.5 system-ui, sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 1.25rem 1rem 4rem; }
+  h1 { font-size: 1.4rem; margin: 0 0 .25rem; }
+  .suave { color: var(--suave); font-size: .9rem; }
+  fieldset { border: 1px solid var(--borde); border-radius: .75rem; margin: 1rem 0; padding: .75rem 1rem; background: var(--superficie); }
+  legend { padding: 0 .4rem; font-weight: 600; }
+  .nota { font-size: 1.35rem; line-height: 1.4; padding: 1rem; border-radius: .75rem; background: var(--superficie); border: 1px solid var(--borde); min-height: 4.5rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); gap: .35rem; }
+  label.op { display: flex; align-items: center; gap: .5rem; min-height: 44px; padding: 0 .5rem; border-radius: .5rem; cursor: pointer; }
+  label.op:has(input:checked) { background: var(--marca); }
+  kbd { font: .8rem ui-monospace, monospace; border: 1px solid var(--borde); border-radius: .3rem; padding: 0 .3rem; color: var(--suave); }
+  .tonos { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .barra { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1rem; }
+  button, input[type=file]::file-selector-button { min-height: 44px; padding: .5rem 1rem; border-radius: 999px; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto); font: inherit; cursor: pointer; }
+  button.principal { background: var(--acento); color: var(--acento-texto); border-color: var(--acento); font-weight: 600; }
+  input[type=text], textarea { width: 100%; padding: .5rem; border: 1px solid var(--borde); border-radius: .5rem; background: var(--superficie); color: var(--texto); font: inherit; }
+  :focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
+  progress { width: 100%; height: .6rem; }
+  .riesgo:has(input:checked) { background: var(--marca); color: var(--alerta); font-weight: 600; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Etiquetado de notas</h1>
+  <p class="suave">Todo ocurre en este navegador: las notas no se envían a ningún lado. Guía: <code>docs/guia-etiquetado.md</code>.</p>
+
+  <section id="inicio">
+    <fieldset>
+      <legend>Empezar</legend>
+      <p><label for="anotador">Tu identificador (sin tu nombre real, por ejemplo "A" o "B")</label>
+        <input id="anotador" type="text" maxlength="20" autocomplete="off"></p>
+      <p><label for="archivo">Archivo de notas (<code>.jsonl</code>, una nota por línea con <code>id</code> y <code>texto</code>)</label><br>
+        <input id="archivo" type="file" accept=".jsonl,.json,.txt"></p>
+      <p id="error-inicio" class="suave" role="alert"></p>
+    </fieldset>
+  </section>
+
+  <section id="trabajo" hidden>
+    <p class="suave" id="progreso-texto"></p>
+    <progress id="progreso" max="1" value="0"></progress>
+    <div class="nota" id="nota" aria-live="polite"></div>
+
+    <fieldset>
+      <legend>Temas (cero o varios)</legend>
+      <div class="rejilla" id="temas"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Tono</legend>
+      <div class="tonos" id="tonos"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Marcas</legend>
+      <label class="op"><input type="checkbox" id="ambigua"> Ambigua <kbd>A</kbd></label>
+      <label class="op riesgo"><input type="checkbox" id="riesgo"> Riesgo: no etiquetar, avisar <kbd>G</kbd></label>
+      <p><label for="comentario">Comentario (opcional)</label><textarea id="comentario" rows="2"></textarea></p>
+    </fieldset>
+
+    <div class="barra">
+      <button id="anterior">← Anterior</button>
+      <button id="siguiente" class="principal">Guardar y seguir <kbd>Enter</kbd></button>
+      <button id="exportar">Descargar etiquetas</button>
+      <span class="suave" id="estado-guardado"></span>
+    </div>
+    <p class="suave">Atajos: <kbd>1</kbd>…<kbd>0</kbd> temas · <kbd>Q</kbd><kbd>W</kbd><kbd>E</kbd><kbd>R</kbd><kbd>T</kbd> tono −2…+2 · <kbd>←</kbd><kbd>→</kbd> moverse. Los atajos no funcionan mientras escribes un comentario.</p>
+  </section>
+</main>
+
+<script>
+'use strict';
+const TEMAS = [
+  ['sueno', 'sueño'], ['estres', 'estrés'], ['alimentacion', 'alimentación'], ['ejercicio', 'ejercicio'],
+  ['animo', 'ánimo'], ['social', 'social'], ['estudio_trabajo', 'estudio o trabajo'], ['pantallas', 'pantallas'],
+  ['hidratacion', 'hidratación'], ['descanso', 'descanso'],
+];
+const TECLAS_TEMA = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+const TONOS = [[-2, 'q'], [-1, 'w'], [0, 'e'], [1, 'r'], [2, 't']];
+const $ = (id) => document.getElementById(id);
+
+let notas = [];
+let etiquetas = {};
+let i = 0;
+let clave = '';
+
+function guardarLocal() {
+  try { localStorage.setItem(clave, JSON.stringify({ etiquetas, i })); $('estado-guardado').textContent = 'Guardado en este navegador'; }
+  catch { $('estado-guardado').textContent = 'No se pudo guardar en este navegador: descarga las etiquetas seguido.'; }
+}
+
+function construir() {
+  $('temas').innerHTML = '';
+  TEMAS.forEach(([id, nombre], k) => {
+    const l = document.createElement('label');
+    l.className = 'op';
+    l.innerHTML = `<input type="checkbox" value="${id}"> ${nombre} <kbd>${TECLAS_TEMA[k]}</kbd>`;
+    $('temas').append(l);
+  });
+  $('tonos').innerHTML = '';
+  TONOS.forEach(([v, t]) => {
+    const l = document.createElement('label');
+    l.className = 'op';
+    l.innerHTML = `<input type="radio" name="tono" value="${v}"> ${v > 0 ? '+' + v : v} <kbd>${t.toUpperCase()}</kbd>`;
+    $('tonos').append(l);
+  });
+}
+
+function mostrar() {
+  const n = notas[i];
+  const e = etiquetas[n.id] ?? {};
+  $('nota').textContent = n.texto;
+  $('progreso-texto').textContent = `Nota ${i + 1} de ${notas.length} · etiquetadas: ${Object.keys(etiquetas).length}`;
+  $('progreso').max = notas.length;
+  $('progreso').value = Object.keys(etiquetas).length;
+  document.querySelectorAll('#temas input').forEach((c) => { c.checked = (e.etiquetas ?? []).includes(c.value); });
+  document.querySelectorAll('#tonos input').forEach((r) => { r.checked = e.tono !== undefined && Number(r.value) === e.tono; });
+  $('ambigua').checked = !!e.ambigua;
+  $('riesgo').checked = !!e.riesgo;
+  $('comentario').value = e.comentario ?? '';
+}
+
+function leerFormulario() {
+  const tono = document.querySelector('#tonos input:checked');
+  const riesgo = $('riesgo').checked;
+  return {
+    etiquetas: riesgo ? [] : [...document.querySelectorAll('#temas input:checked')].map((c) => c.value),
+    tono: riesgo || !tono ? null : Number(tono.value),
+    ambigua: $('ambigua').checked,
+    riesgo,
+    comentario: $('comentario').value.trim(),
+  };
+}
+
+function guardarYMover(paso) {
+  const f = leerFormulario();
+  if (paso > 0 && !f.riesgo && f.tono === null) {
+    $('estado-guardado').textContent = 'Falta el tono (usa Q, W, E, R o T).';
+    return;
+  }
+  etiquetas[notas[i].id] = f;
+  guardarLocal();
+  i = Math.max(0, Math.min(notas.length - 1, i + paso));
+  mostrar();
+}
+
+function exportar() {
+  const anotador = $('anotador').value.trim();
+  const lineas = notas.filter((n) => etiquetas[n.id]).map((n) =>
+    JSON.stringify({ id: n.id, anotador, guia: 'v1', ...etiquetas[n.id] }));
+  const blob = new Blob([lineas.join('\n') + '\n'], { type: 'application/x-ndjson' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `etiquetas_${anotador || 'anon'}.jsonl`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+$('archivo').addEventListener('change', async (ev) => {
+  const archivo = ev.target.files[0];
+  const anotador = $('anotador').value.trim();
+  if (!anotador) { $('error-inicio').textContent = 'Primero escribe tu identificador.'; ev.target.value = ''; return; }
+  try {
+    notas = (await archivo.text()).split('\n').filter((l) => l.trim()).map((l) => JSON.parse(l))
+      .map(({ id, texto }) => ({ id: String(id), texto: String(texto) }));  // solo id y texto: etiquetado a ciegas
+  } catch {
+    $('error-inicio').textContent = 'El archivo no es un JSONL válido. Cada línea debe ser un objeto con "id" y "texto".';
+    return;
+  }
+  clave = `tabien-etiquetado:${archivo.name}:${anotador}`;
+  try { ({ etiquetas, i } = JSON.parse(localStorage.getItem(clave)) ?? { etiquetas: {}, i: 0 }); }
+  catch { etiquetas = {}; i = 0; }
+  construir();
+  $('inicio').hidden = true;
+  $('trabajo').hidden = false;
+  mostrar();
+});
+
+$('siguiente').addEventListener('click', () => guardarYMover(1));
+$('anterior').addEventListener('click', () => guardarYMover(-1));
+$('exportar').addEventListener('click', () => { etiquetas[notas[i].id] = leerFormulario(); guardarLocal(); exportar(); });
+
+document.addEventListener('keydown', (ev) => {
+  if ($('trabajo').hidden || ev.target.tagName === 'TEXTAREA' || ev.ctrlKey || ev.metaKey || ev.altKey) return;
+  const k = ev.key.toLowerCase();
+  if (k === 'enter' && ev.target.tagName === 'BUTTON') return;  // el botón ya maneja su click
+  const t = TECLAS_TEMA.indexOf(k);
+  if (t >= 0) { const c = document.querySelectorAll('#temas input')[t]; c.checked = !c.checked; ev.preventDefault(); return; }
+  const tono = TONOS.find(([, tecla]) => tecla === k);
+  if (tono) { document.querySelector(`#tonos input[value="${tono[0]}"]`).checked = true; ev.preventDefault(); return; }
+  if (k === 'a') { $('ambigua').checked = !$('ambigua').checked; ev.preventDefault(); }
+  else if (k === 'g') { $('riesgo').checked = !$('riesgo').checked; ev.preventDefault(); }
+  else if (k === 'enter' || k === 'arrowright') { guardarYMover(1); ev.preventDefault(); }
+  else if (k === 'arrowleft') { guardarYMover(-1); ev.preventDefault(); }
+});
+</script>
+</body>
+</html>

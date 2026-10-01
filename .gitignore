@@ -29,3 +29,6 @@ bench/resultados/crudo/
 .DS_Store
 .idea/
 .vscode/
+
+# Muestras de etiquetado (sintéticas) sí van a git
+!ml/etiquetado/*.jsonl

@@ -1,21 +1,21 @@
 {
- "generador": "sintetico-v2",
+ "generador": "sintetico-v2.1",
  "uso_permitido": "pipeline, motor de patrones, simulación de rutas",
  "uso_prohibido": "reportar desempeño de comprensión de texto",
  "archivos": {
   "d0_v2.jsonl": {
-   "sha256": "dbf2dca6e859e296cd7e45528db56d65fff4b3d47cb1979076f67b0392ab8ef8",
+   "sha256": "9cf97ef3d6c5786a88ddd6c13ca704b92211a1122e9d6299d825b9bd7d21c3cc",
    "filas": 2400
   },
   "d0_v2_efectos.json": {
-   "sha256": "972b9749c25741e214f6e977d09c5d5b0f1a15ad9deee258aa2d895c311582ca"
+   "sha256": "d904dcce837599c9fd401861e6512f4528411460aaee8225d71c3a3098f405a3"
   },
   "d0_v2_largo.jsonl": {
-   "sha256": "473177cfac525429ddb48df64dbb70b594daac88673998a306857d51bcf0d163",
+   "sha256": "5c63ac18c86540df6a014329d406fe15d48662d6bad215b6e0baf9ea248987a0",
    "filas": 3600
   },
   "d0_v2_largo_efectos.json": {
-   "sha256": "a9b0dc4c3a9d871645f7ced4e91504340a350184c61cc86c658d291d80a5705b"
+   "sha256": "053f289d9af1f969efcfba37ceb2882d6b5e9068c3c79fe87a2eb40ce34d6f83"
   }
  }
 }
