@@ -20,7 +20,7 @@ Presupuestos: JS inicial ≤ 100 KB gzip · ruta crítica ≤ 150 KB · carga in
 
 ## Arquitectura
 
-- `app/` (TypeScript strict, Vite, vanilla DOM + Canvas). `app/src/core` y `app/src/ml` **nunca tocan el DOM**. Inferencia en TS puro sobre `Float32Array`, en un Worker, sin runtimes de terceros.
+- `app/` (TypeScript strict, Vite, vanilla DOM + Canvas). Diseño **"Aero"** (`decisions/009`): cielo celeste, vidrio, azul y verde intensos; tokens en `app/src/ui/estilos.css` con test de contraste AA. `app/src/core` y `app/src/ml` **nunca tocan el DOM**. Inferencia en TS puro sobre `Float32Array`, en un Worker, sin runtimes de terceros.
 - `ml/` taller en Python 3.12 (uv): entrenamiento, evaluación y exportación a `ml/registry/vNNN/{weights.bin, manifest.json}`. **Nunca** corre en el dispositivo.
 - `spec/texto.md` + `spec/fixtures/` = contrato del pipeline de texto. Python y TS corren los mismos fixtures. **Paridad Python ↔ TS obligatoria** (tolerancia 1e-5).
 - Un modelo con `pipeline_version` distinta a la del runtime **no se carga**. Un modelo con `"publicable": false` no va al producto.
@@ -51,4 +51,5 @@ env PYTHONPATH=src uv run python -m data.sintetico        # D0 v2.1
 env PYTHONPATH=src uv run python -m evaluacion.acuerdo A.jsonl B.jsonl
 env PYTHONPATH=src:. uv run python -m patrones.evaluar --semilla 31   # criterio F3 con D0
 env PYTHONPATH=src:. uv run python -m data.demo                       # persona de ejemplo para la app
+env PYTHONPATH=src:. uv run python -m rutas.simulador --semilla 53    # bandit vs reglas (F4)
 ```

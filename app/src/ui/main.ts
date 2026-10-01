@@ -1,4 +1,4 @@
-// Pantalla "Hoy" mínima para el piloto (F1). Capa delgada: la lógica vive en core/.
+// UI de Tabien: pestañas Hoy / Ruta / Notamos / Mis datos. Capa delgada: la lógica vive en core/.
 
 import { fechaLocal, type EntradaDia, type RegistroDia } from '../core/dominio';
 import { ErrorEntrada, guardarDia, type Repositorio } from '../core/registro';
@@ -6,6 +6,8 @@ import { construirExportacion, nuevoCodigoParticipante } from '../core/exportar'
 import { RepositorioMemoria } from '../core/memoria';
 import { RepositorioIndexedDB } from '../persistencia/indexeddb';
 import { cargarDemo, vistaHallazgos, type DiaDemo } from '../core/hallazgos';
+import { MAX_METAS, guardarEstado, leerEstado, vistaRuta } from '../core/rutas';
+import { AREAS, aceptar, adherencia, marcarDia, muyDificil, noAplica, type EstadoRuta } from '../ml/rutas/index';
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 
@@ -38,6 +40,7 @@ function mostrarAyuda(desdeNota: boolean): void {
     ? 'Gracias por contarlo. Lo que escribiste suena difícil, y mereces apoyo. Estas líneas son gratuitas y confidenciales:'
     : 'Si estás pasando por un momento muy difícil, habla con alguien hoy. Estas líneas son gratuitas y confidenciales:';
   ayuda.hidden = false;
+  window.scrollTo({ top: 0 });
   ayuda.focus();
 }
 
@@ -158,6 +161,7 @@ form.addEventListener('submit', async (e) => {
     }
     await pintarHistorial();
     await pintarHallazgos();
+    await pintarRuta();
   } catch (err) {
     if (err instanceof ErrorEntrada) {
       $(`error-${err.campo}`).textContent = err.message;
@@ -206,6 +210,7 @@ $('borrar-no').addEventListener('click', () => {
 });
 $('borrar-si').addEventListener('click', async () => {
   await repo.borrarTodo();
+  ruta = await leerEstado(repo);
   $('confirmar-borrado').hidden = true;
   cargarEnFormulario(undefined);
   ayuda.hidden = true;
@@ -213,6 +218,167 @@ $('borrar-si').addEventListener('click', async () => {
   $('estado-borrar').textContent = 'Listo: se borró todo de este dispositivo.';
   await pintarHistorial();
   await pintarHallazgos();
+  await pintarRuta();
+});
+
+// ----------------------------- pestañas ------------------------------------------------------
+const PESTANAS = ['hoy', 'ruta', 'notamos', 'datos'] as const;
+type Pestana = (typeof PESTANAS)[number];
+
+function activarPestana(p: Pestana, foco = false): void {
+  for (const q of PESTANAS) {
+    const tab = $(`tab-${q}`);
+    const activa = q === p;
+    tab.setAttribute('aria-selected', String(activa));
+    tab.tabIndex = activa ? 0 : -1;
+    $(`panel-${q}`).hidden = !activa;
+  }
+  if (foco) $(`tab-${p}`).focus();
+  window.scrollTo({ top: 0 });
+  try {
+    sessionStorage.setItem('tabien:pestana', p);
+  } catch {
+    /* sin almacenamiento de sesión: no importa */
+  }
+}
+
+PESTANAS.forEach((p, i) => {
+  const tab = $(`tab-${p}`);
+  tab.addEventListener('click', () => activarPestana(p));
+  tab.addEventListener('keydown', (e) => {
+    const k = (e as KeyboardEvent).key;
+    const salto = k === 'ArrowRight' ? 1 : k === 'ArrowLeft' ? -1 : 0;
+    if (k === 'Home' || k === 'End' || salto) {
+      e.preventDefault();
+      const j = k === 'Home' ? 0 : k === 'End' ? PESTANAS.length - 1 : (i + salto + PESTANAS.length) % PESTANAS.length;
+      activarPestana(PESTANAS[j] as Pestana, true);
+    }
+  });
+});
+
+$('cerrar-ayuda').addEventListener('click', () => {
+  ayuda.hidden = true;
+});
+
+// ----------------------------- ruta ----------------------------------------------------------
+let ruta: EstadoRuta;
+
+const MENSAJE_CAMBIO = {
+  avanza: '¡Bien! Pasaste al siguiente paso.',
+  retrocede: 'Lo hicimos un poco más fácil. Ajustar el paso también es avanzar.',
+  completa: 'Completaste esta ruta. Cuando quieras, empieza otra.',
+  sigue: '',
+} as const;
+
+async function riesgoHoy(): Promise<boolean> {
+  return (await repo.obtener(hoy()))?.riesgo?.activado === true;
+}
+
+async function guardarRuta(e: EstadoRuta): Promise<void> {
+  ruta = e;
+  await guardarEstado(repo, e);
+  await pintarRuta();
+}
+
+async function pintarRuta(): Promise<void> {
+  const analisis = vistaHallazgos(await repo.listar(), hoy()).analisis;
+  const v = vistaRuta(ruta, analisis, hoy(), await riesgoHoy());
+  if (v.cambio !== 'sigue' || v.estadoRuta !== ruta) {
+    ruta = v.estadoRuta;
+    await guardarEstado(repo, ruta);
+  }
+  const cambio = $('ruta-cambio');
+  cambio.hidden = v.cambio === 'sigue';
+  cambio.textContent = MENSAJE_CAMBIO[v.cambio];
+
+  $('ruta-riesgo').hidden = v.estado !== 'oculto_por_riesgo';
+  $('ruta-vacia').hidden = v.estado !== 'sin_candidatos';
+  $('ruta-paso').hidden = !v.sugerencia;
+  pintarMetas();
+  if (!v.sugerencia) return;
+
+  const s = v.sugerencia;
+  $('ruta-area').textContent = AREAS[s.habito.area]?.nombre ?? s.habito.area;
+  $('ruta-habito').textContent = s.habito.descripcion;
+  $('ruta-porque').textContent = s.porque;
+  $('ruta-siguiente').textContent = s.siguiente ? `Después: ${s.siguiente.descripcion}` : 'Es el último paso de esta ruta.';
+  const prog = $('ruta-progreso');
+  prog.replaceChildren(
+    ...Array.from({ length: v.pasoEnRuta?.total ?? 0 }, (_, i) => {
+      const li = document.createElement('li');
+      const n = i + 1;
+      const actual = v.pasoEnRuta?.actual ?? 0;
+      li.className = n < actual ? 'hecho' : n === actual ? 'actual' : '';
+      li.setAttribute('aria-label', `Paso ${n}${n === actual ? ' (actual)' : n < actual ? ' (hecho)' : ''}`);
+      return li;
+    }),
+  );
+  $('ruta-propuesta').hidden = v.estado !== 'propuesta';
+  $('ruta-activa').hidden = v.estado !== 'activa';
+  $('ruta-dificil').hidden = v.estado !== 'activa';
+  $('ruta-noaplica').hidden = false;
+  $('ruta-si').setAttribute('aria-pressed', String(v.hechoHoy === true));
+  $('ruta-no').setAttribute('aria-pressed', String(v.hechoHoy === false));
+  const a = adherencia(ruta, hoy());
+  const desde = ruta.activo?.desde;
+  const dias = desde ? Object.entries(ruta.checks).filter(([f, h]) => h && f >= desde).length : 0;
+  $('ruta-adherencia').textContent = ruta.activo
+    ? a
+      ? `Esta semana: ${a.hechos} de 7 días.`
+      : dias === 0
+        ? 'Empezaste este paso. A los 7 días vemos cómo va.'
+        : `Llevas ${dias} ${dias === 1 ? 'día' : 'días'} cumplido${dias === 1 ? '' : 's'} en este paso. A los 7 días vemos cómo va.`
+    : '';
+  $('ruta-fuentes').replaceChildren(
+    ...v.fuentes.map((f) => {
+      const li = document.createElement('li');
+      const enlace = document.createElement('a');
+      enlace.href = f.url;
+      enlace.target = '_blank';
+      enlace.rel = 'noopener noreferrer';
+      enlace.textContent = f.cita;
+      li.append(enlace);
+      return li;
+    }),
+  );
+  $('ruta-contra').textContent = s.habito.contraindicaciones.join(' ');
+}
+
+function pintarMetas(): void {
+  $('metas').replaceChildren(
+    ...Object.entries(AREAS).map(([id, a]) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'boton';
+      b.textContent = a.nombre;
+      const elegida = ruta.metas.includes(id);
+      b.setAttribute('aria-pressed', String(elegida));
+      b.addEventListener('click', async () => {
+        const metas = elegida ? ruta.metas.filter((m) => m !== id) : [...ruta.metas, id].slice(-MAX_METAS);
+        await guardarRuta({ ...ruta, metas });
+      });
+      return b;
+    }),
+  );
+}
+
+$('ruta-intento').addEventListener('click', async () => {
+  const analisis = vistaHallazgos(await repo.listar(), hoy()).analisis;
+  const v = vistaRuta(ruta, analisis, hoy(), await riesgoHoy());
+  if (v.sugerencia) await guardarRuta(aceptar(ruta, v.sugerencia, hoy()));
+});
+$('ruta-si').addEventListener('click', () => guardarRuta(marcarDia(ruta, hoy(), true)));
+$('ruta-no').addEventListener('click', () => guardarRuta(marcarDia(ruta, hoy(), false)));
+$('ruta-dificil').addEventListener('click', () => guardarRuta(muyDificil(ruta, hoy())));
+$('ruta-noaplica').addEventListener('click', async () => {
+  if (ruta.activo) {
+    await guardarRuta(noAplica(ruta, hoy()));
+    return;
+  }
+  // Propuesta sin aceptar: "no aplica" también saca esa área por 30 días.
+  const analisis = vistaHallazgos(await repo.listar(), hoy()).analisis;
+  const v = vistaRuta(ruta, analisis, hoy(), await riesgoHoy());
+  if (v.sugerencia) await guardarRuta(noAplica(aceptar(ruta, v.sugerencia, hoy()), hoy()));
 });
 
 $('cargar-demo').addEventListener('click', async () => {
@@ -226,7 +392,8 @@ $('cargar-demo').addEventListener('click', async () => {
     $('estado-demo').textContent = `Listo: se cargaron ${n} días de una persona inventada. Mira "Lo que notamos".`;
     await pintarHistorial();
     await pintarHallazgos();
-    $('hallazgos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    await pintarRuta();
+    activarPestana('notamos');
   } catch {
     $('estado-demo').textContent = 'No pude cargar los datos de ejemplo. Revisa tu conexión e inténtalo de nuevo.';
   } finally {
@@ -244,8 +411,18 @@ async function iniciar(): Promise<void> {
     usandoMemoria = true;
   }
   cargarEnFormulario(await repo.obtener(hoy()));
+  ruta = await leerEstado(repo);
   await pintarHistorial();
   await pintarHallazgos();
+  await pintarRuta();
+  let inicial: Pestana = 'hoy';
+  try {
+    const guardada = sessionStorage.getItem('tabien:pestana');
+    if (guardada && (PESTANAS as readonly string[]).includes(guardada)) inicial = guardada as Pestana;
+  } catch {
+    /* sin almacenamiento de sesión */
+  }
+  activarPestana(inicial);
   if (import.meta.env.MODE === 'lt') {
     $('aviso-lt').hidden = false;
     await import('./lt-modelo');

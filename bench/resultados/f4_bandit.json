@@ -1,0 +1,22 @@
+{
+ "personas": 300,
+ "semanas": 26,
+ "semilla": 53,
+ "regret_medio_v1": 9.784,
+ "regret_medio_bandit": 7.827,
+ "recompensa_media_v1": 9.16,
+ "recompensa_media_bandit": 9.47,
+ "diferencia_regret_v1_menos_bandit": 1.956,
+ "ic95": [
+  1.496,
+  2.42
+ ],
+ "diferencia_recompensa_bandit_menos_v1": 0.307,
+ "ic95_recompensa": [
+  -0.05,
+  0.67
+ ],
+ "dificultad_media_v1": 1.48,
+ "dificultad_media_bandit": 1.54,
+ "bandit_mejor": true
+}

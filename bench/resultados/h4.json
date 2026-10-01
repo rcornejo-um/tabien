@@ -21,39 +21,39 @@
  "resumen": {
   "B": {
    "tti": {
-    "medianaA": 1247.335,
-    "medianaX": 1229.334,
-    "diferencia": -18.000999999999976,
+    "medianaA": 1335.581,
+    "medianaX": 1289.638,
+    "diferencia": -45.942999999999984,
     "ic95": {
-     "bajo": -18.000999999999976,
-     "alto": -18.000999999999976
+     "bajo": -45.942999999999984,
+     "alto": -45.942999999999984
     }
    },
    "fcp": {
-    "medianaA": 1247.335,
-    "medianaX": 1229.334,
-    "diferencia": -18.000999999999976,
+    "medianaA": 1335.581,
+    "medianaX": 1289.638,
+    "diferencia": -45.942999999999984,
     "ic95": {
-     "bajo": -18.000999999999976,
-     "alto": -18.000999999999976
+     "bajo": -45.942999999999984,
+     "alto": -45.942999999999984
     }
    },
    "lcp": {
-    "medianaA": 1286.808,
-    "medianaX": 1267.219,
-    "diferencia": -19.588999999999942,
+    "medianaA": 1405.129,
+    "medianaX": 1406.237,
+    "diferencia": 1.1080000000001746,
     "ic95": {
-     "bajo": -19.588999999999942,
-     "alto": -19.588999999999942
+     "bajo": 1.1080000000001746,
+     "alto": 1.1080000000001746
     }
    },
    "si": {
-    "medianaA": 1249,
-    "medianaX": 1218,
-    "diferencia": -31,
+    "medianaA": 1353,
+    "medianaX": 1315,
+    "diferencia": -38,
     "ic95": {
-     "bajo": -31,
-     "alto": -31
+     "bajo": -38,
+     "alto": -38
     }
    },
    "tbt": {
@@ -66,8 +66,8 @@
     }
    },
    "transferenciaTotal": {
-    "medianaA": 11422,
-    "medianaX": 31380,
+    "medianaA": 23999,
+    "medianaX": 43957,
     "diferencia": 19958,
     "ic95": {
      "bajo": 19958,
@@ -75,8 +75,8 @@
     }
    },
    "jsInicialTransferido": {
-    "medianaA": 7690,
-    "medianaX": 7690,
+    "medianaA": 17628,
+    "medianaX": 17628,
     "diferencia": 0,
     "ic95": {
      "bajo": 0,
@@ -86,39 +86,39 @@
   },
   "C": {
    "tti": {
-    "medianaA": 1247.335,
-    "medianaX": 1226.097,
-    "diferencia": -21.238000000000056,
+    "medianaA": 1335.581,
+    "medianaX": 1295.443,
+    "diferencia": -40.13799999999992,
     "ic95": {
-     "bajo": -21.238000000000056,
-     "alto": -21.238000000000056
+     "bajo": -40.13799999999992,
+     "alto": -40.13799999999992
     }
    },
    "fcp": {
-    "medianaA": 1247.335,
-    "medianaX": 1226.097,
-    "diferencia": -21.238000000000056,
+    "medianaA": 1335.581,
+    "medianaX": 1295.443,
+    "diferencia": -40.13799999999992,
     "ic95": {
-     "bajo": -21.238000000000056,
-     "alto": -21.238000000000056
+     "bajo": -40.13799999999992,
+     "alto": -40.13799999999992
     }
    },
    "lcp": {
-    "medianaA": 1286.808,
-    "medianaX": 1291.918,
-    "diferencia": 5.1099999999999,
+    "medianaA": 1405.129,
+    "medianaX": 1395.855,
+    "diferencia": -9.273999999999887,
     "ic95": {
-     "bajo": 5.1099999999999,
-     "alto": 5.1099999999999
+     "bajo": -9.273999999999887,
+     "alto": -9.273999999999887
     }
    },
    "si": {
-    "medianaA": 1249,
-    "medianaX": 1231,
-    "diferencia": -18,
+    "medianaA": 1353,
+    "medianaX": 1319,
+    "diferencia": -34,
     "ic95": {
-     "bajo": -18,
-     "alto": -18
+     "bajo": -34,
+     "alto": -34
     }
    },
    "tbt": {
@@ -131,17 +131,17 @@
     }
    },
    "transferenciaTotal": {
-    "medianaA": 11422,
-    "medianaX": 184106,
-    "diferencia": 172684,
+    "medianaA": 23999,
+    "medianaX": 196685,
+    "diferencia": 172686,
     "ic95": {
-     "bajo": 172684,
-     "alto": 172684
+     "bajo": 172686,
+     "alto": 172686
     }
    },
    "jsInicialTransferido": {
-    "medianaA": 7690,
-    "medianaX": 7690,
+    "medianaA": 17628,
+    "medianaX": 17628,
     "diferencia": 0,
     "ic95": {
      "bajo": 0,
@@ -154,45 +154,45 @@
  "corridas": {
   "A": [
    {
-    "fcp": 1247.335,
-    "lcp": 1286.808,
-    "si": 1249,
+    "fcp": 1335.581,
+    "lcp": 1405.129,
+    "si": 1353,
     "tbt": 0,
-    "tti": 1247.335,
-    "transferenciaTotal": 11422,
-    "jsInicialTransferido": 7690,
+    "tti": 1335.581,
+    "transferenciaTotal": 23999,
+    "jsInicialTransferido": 17628,
     "pesosDescargados": null,
     "error": null
    }
   ],
   "B": [
    {
-    "fcp": 1229.334,
-    "lcp": 1267.219,
-    "si": 1218,
+    "fcp": 1289.638,
+    "lcp": 1406.237,
+    "si": 1315,
     "tbt": 0,
-    "tti": 1229.334,
-    "transferenciaTotal": 31380,
-    "jsInicialTransferido": 7690,
+    "tti": 1289.638,
+    "transferenciaTotal": 43957,
+    "jsInicialTransferido": 17628,
     "pesosDescargados": {
      "transferSize": 18871,
-     "fin": 2519.9419999942183
+     "fin": 2628.957999996841
     },
     "error": null
    }
   ],
   "C": [
    {
-    "fcp": 1226.097,
-    "lcp": 1291.918,
-    "si": 1231,
+    "fcp": 1295.443,
+    "lcp": 1395.855,
+    "si": 1319,
     "tbt": 0,
-    "tti": 1226.097,
-    "transferenciaTotal": 184106,
-    "jsInicialTransferido": 7690,
+    "tti": 1295.443,
+    "transferenciaTotal": 196685,
+    "jsInicialTransferido": 17628,
     "pesosDescargados": {
-     "transferSize": 171454,
-     "fin": 3333.0769999995828
+     "transferSize": 171456,
+     "fin": 3431.7330000028014
     },
     "error": null
    }

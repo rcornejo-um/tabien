@@ -2,58 +2,27 @@
 <html lang="es-CL">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark light">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#BFE9FF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#031B3A" media="(prefers-color-scheme: dark)">
   <meta name="description" content="Tabien: escribe cómo estuvo tu día. Todo queda en tu teléfono.">
   <title>Tabien</title>
   <link rel="stylesheet" href="./src/ui/estilos.css">
 </head>
 <body>
-  <main class="hoy">
+  <header class="barra">
+    <span class="marca" aria-label="Tabien">Tabien</span>
+    <button type="button" class="enlace" id="abrir-ayuda">¿Necesitas ayuda ahora?</button>
+  </header>
+
+  <main class="contenido">
     <p class="aviso" id="aviso-lt" hidden>
       Prueba técnica (LT): el modelo de esta página se entrenó solo con datos sintéticos.
       Sus porcentajes no significan nada sobre tu nota.
     </p>
-    <p class="aviso" id="aviso-prototipo">
-      Prototipo. Tus notas se guardan solo en este dispositivo.
-    </p>
 
-    <header class="cabecera">
-      <h1>Hoy</h1>
-      <button type="button" class="enlace" id="abrir-ayuda">¿Necesitas ayuda ahora?</button>
-    </header>
-    <p class="fecha" id="fecha"></p>
-
-    <form id="form-dia" novalidate>
-      <label for="nota">¿Cómo estuvo tu día?</label>
-      <textarea id="nota" rows="4" maxlength="2000" aria-describedby="error-texto"
-        placeholder="dormí pésimo, harta pega y cero ejercicio 😩"></textarea>
-      <p class="error" id="error-texto" role="alert"></p>
-
-      <fieldset class="chips">
-        <legend>Si quieres, agrega datos</legend>
-        <div class="chip">
-          <label for="sueno">😴 Horas de sueño</label>
-          <input id="sueno" inputmode="decimal" autocomplete="off" placeholder="7,5" aria-describedby="error-suenoHoras">
-          <p class="error" id="error-suenoHoras" role="alert"></p>
-        </div>
-        <div class="chip">
-          <label for="pasos">👟 Pasos</label>
-          <input id="pasos" inputmode="numeric" autocomplete="off" placeholder="6000" aria-describedby="error-pasos">
-          <p class="error" id="error-pasos" role="alert"></p>
-        </div>
-        <div class="chip">
-          <label for="agua">💧 Vasos de agua</label>
-          <input id="agua" inputmode="numeric" autocomplete="off" placeholder="6" aria-describedby="error-vasosAgua">
-          <p class="error" id="error-vasosAgua" role="alert"></p>
-        </div>
-      </fieldset>
-
-      <button type="submit" class="principal">Guardar</button>
-      <p class="estado" id="estado" role="status"></p>
-    </form>
-
-    <section class="tarjeta ayuda" id="ayuda" hidden tabindex="-1" aria-labelledby="titulo-ayuda">
+    <section class="vidrio ayuda" id="ayuda" hidden tabindex="-1" aria-labelledby="titulo-ayuda">
       <h2 id="titulo-ayuda">Hay personas que pueden ayudarte</h2>
       <p id="ayuda-intro">Si estás pasando por un momento muy difícil, habla con alguien hoy. Estas líneas son gratuitas y confidenciales:</p>
       <ul>
@@ -63,57 +32,152 @@
       </ul>
       <p>Si estás en peligro ahora mismo, llama al 131 o ve a la urgencia más cercana.</p>
       <p class="suave">Tabien no es un servicio de salud y no avisa a nadie: tu nota sigue guardada solo en este dispositivo.</p>
+      <button type="button" class="boton" id="cerrar-ayuda">Cerrar</button>
     </section>
 
-    <section class="tarjeta" id="tarjeta-entendi" hidden aria-live="polite">
-      <h2>Esto entendí</h2>
-      <p id="entendi"></p>
+    <!-- HOY -->
+    <section class="panel" id="panel-hoy" role="tabpanel" aria-labelledby="tab-hoy">
+      <p class="fecha" id="fecha"></p>
+      <h1>Hoy</h1>
+      <form id="form-dia" class="vidrio" novalidate>
+        <label for="nota">¿Cómo estuvo tu día?</label>
+        <textarea id="nota" rows="4" maxlength="2000" aria-describedby="error-texto"
+          placeholder="dormí pésimo, harta pega y cero ejercicio 😩"></textarea>
+        <p class="error" id="error-texto" role="alert"></p>
+
+        <fieldset class="chips">
+          <legend>Si quieres, agrega datos</legend>
+          <div class="chip">
+            <label for="sueno">Horas de sueño</label>
+            <input id="sueno" inputmode="decimal" autocomplete="off" placeholder="7,5" aria-describedby="error-suenoHoras">
+            <p class="error" id="error-suenoHoras" role="alert"></p>
+          </div>
+          <div class="chip">
+            <label for="pasos">Pasos</label>
+            <input id="pasos" inputmode="numeric" autocomplete="off" placeholder="6000" aria-describedby="error-pasos">
+            <p class="error" id="error-pasos" role="alert"></p>
+          </div>
+          <div class="chip">
+            <label for="agua">Vasos de agua</label>
+            <input id="agua" inputmode="numeric" autocomplete="off" placeholder="6" aria-describedby="error-vasosAgua">
+            <p class="error" id="error-vasosAgua" role="alert"></p>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="boton principal">Guardar</button>
+        <p class="estado" id="estado" role="status"></p>
+      </form>
+
+      <section class="vidrio" id="tarjeta-entendi" hidden aria-live="polite">
+        <h2>Esto entendí</h2>
+        <p id="entendi"></p>
+      </section>
     </section>
 
-    <section class="tarjeta" id="hallazgos" aria-labelledby="titulo-hallazgos">
-      <h2 id="titulo-hallazgos">Lo que notamos</h2>
-      <p class="suave" id="hallazgos-estado"></p>
-      <ul class="hallazgos" id="lista-hallazgos"></ul>
-      <ul class="hallazgos" id="lista-tendencias"></ul>
-      <p class="racha" id="racha" hidden></p>
-    </section>
+    <!-- RUTA -->
+    <section class="panel" id="panel-ruta" role="tabpanel" aria-labelledby="tab-ruta" hidden>
+      <h1>Tu ruta</h1>
+      <p class="aviso-cambio" id="ruta-cambio" role="status" hidden></p>
 
-    <section class="tarjeta">
-      <h2>Últimos días</h2>
-      <ul class="historial" id="historial"></ul>
-    </section>
-
-    <details class="tarjeta" id="ajustes">
-      <summary><h2>Mis datos</h2></summary>
-
-      <h3>Enviar al piloto</h3>
-      <p>Si participas en el piloto, puedes descargar un archivo para entregarlo. Antes de salir de tu teléfono:</p>
-      <ul class="suave">
-        <li>los correos, teléfonos y RUT se reemplazan por etiquetas;</li>
-        <li>las fechas se cambian por "día 0, día 1…";</li>
-        <li>las notas que hablen de crisis o de hacerse daño <strong>no</strong> se incluyen.</li>
-      </ul>
-      <p class="suave">Los nombres de personas todavía no se borran solos: revisa el archivo antes de entregarlo.</p>
-      <label class="consentimiento"><input type="checkbox" id="consiento"> Entiendo qué se exporta y quiero descargarlo esta vez.</label>
-      <button type="button" id="exportar" disabled>Descargar mis notas anonimizadas</button>
-      <p class="estado" id="estado-exportar" role="status"></p>
-
-      <h3>Datos de ejemplo</h3>
-      <p>Para probar Tabien sin esperar dos semanas: carga 60 días de una persona <strong>inventada</strong>. Se mezclan con tus datos; "Borrar todo" los quita.</p>
-      <button type="button" id="cargar-demo">Cargar datos de ejemplo</button>
-      <p class="estado" id="estado-demo" role="status"></p>
-
-      <h3>Borrar todo</h3>
-      <p>Borra todas tus notas y datos de este dispositivo. No se puede deshacer.</p>
-      <button type="button" class="peligro" id="borrar">Borrar todo</button>
-      <div id="confirmar-borrado" hidden>
-        <p><strong>¿Seguro? Se borrará todo y no hay vuelta atrás.</strong></p>
-        <button type="button" class="peligro" id="borrar-si">Sí, borrar todo</button>
-        <button type="button" id="borrar-no">Cancelar</button>
+      <div class="vidrio" id="ruta-vacia" hidden>
+        <h2>¿Qué te gustaría trabajar?</h2>
+        <p class="suave">Elige hasta dos metas. También te propondremos pasos según lo que notemos en tus días.</p>
+        <div class="metas" id="metas"></div>
       </div>
-      <p class="estado" id="estado-borrar" role="status"></p>
-    </details>
+
+      <p class="vidrio suave" id="ruta-riesgo" hidden>Hoy no te proponemos hábitos. Lo importante ahora eres tú.</p>
+
+      <article class="vidrio paso" id="ruta-paso" hidden>
+        <p class="area" id="ruta-area"></p>
+        <h2 class="paso-texto" id="ruta-habito"></h2>
+        <p class="porque" id="ruta-porque"></p>
+        <ol class="progreso" id="ruta-progreso" aria-label="Pasos de la ruta"></ol>
+
+        <div id="ruta-propuesta">
+          <button type="button" class="boton verde" id="ruta-intento">Lo intento</button>
+        </div>
+        <div id="ruta-activa" hidden>
+          <p class="pregunta">¿Lo hiciste hoy?</p>
+          <div class="fila">
+            <button type="button" class="boton verde" id="ruta-si" aria-pressed="false">Sí, lo hice</button>
+            <button type="button" class="boton" id="ruta-no" aria-pressed="false">Hoy no</button>
+          </div>
+          <p class="suave" id="ruta-adherencia"></p>
+        </div>
+        <div class="fila secundaria">
+          <button type="button" class="boton suave-boton" id="ruta-dificil">Muy difícil</button>
+          <button type="button" class="boton suave-boton" id="ruta-noaplica">No aplica</button>
+        </div>
+        <p class="siguiente" id="ruta-siguiente"></p>
+        <details class="fuentes">
+          <summary>¿De dónde sale este paso?</summary>
+          <ul id="ruta-fuentes"></ul>
+          <p class="suave" id="ruta-contra"></p>
+        </details>
+      </article>
+    </section>
+
+    <!-- NOTAMOS -->
+    <section class="panel" id="panel-notamos" role="tabpanel" aria-labelledby="tab-notamos" hidden>
+      <h1>Lo que notamos</h1>
+      <section class="vidrio" id="hallazgos" aria-labelledby="titulo-hallazgos">
+        <h2 id="titulo-hallazgos" class="solo-lector">Hallazgos</h2>
+        <p class="suave" id="hallazgos-estado"></p>
+        <ul class="hallazgos" id="lista-hallazgos"></ul>
+        <ul class="hallazgos" id="lista-tendencias"></ul>
+        <p class="racha" id="racha" hidden></p>
+      </section>
+    </section>
+
+    <!-- DATOS -->
+    <section class="panel" id="panel-datos" role="tabpanel" aria-labelledby="tab-datos" hidden>
+      <h1>Mis datos</h1>
+      <p class="aviso" id="aviso-prototipo">Prototipo. Tus notas se guardan solo en este dispositivo.</p>
+
+      <section class="vidrio">
+        <h2>Últimos días</h2>
+        <ul class="historial" id="historial"></ul>
+      </section>
+
+      <section class="vidrio" id="ajustes">
+        <h2>Datos de ejemplo</h2>
+        <p>Para probar Tabien sin esperar dos semanas: carga 60 días de una persona <strong>inventada</strong>. Se mezclan con tus datos; "Borrar todo" los quita.</p>
+        <button type="button" class="boton" id="cargar-demo">Cargar datos de ejemplo</button>
+        <p class="estado" id="estado-demo" role="status"></p>
+
+        <h2>Enviar al piloto</h2>
+        <p>Si participas en el piloto, puedes descargar un archivo para entregarlo. Antes de salir de tu teléfono:</p>
+        <ul class="suave">
+          <li>los correos, teléfonos y RUT se reemplazan por etiquetas;</li>
+          <li>las fechas se cambian por "día 0, día 1…";</li>
+          <li>las notas que hablen de crisis o de hacerse daño <strong>no</strong> se incluyen.</li>
+        </ul>
+        <p class="suave">Los nombres de personas todavía no se borran solos: revisa el archivo antes de entregarlo.</p>
+        <label class="consentimiento"><input type="checkbox" id="consiento"> Entiendo qué se exporta y quiero descargarlo esta vez.</label>
+        <button type="button" class="boton" id="exportar" disabled>Descargar mis notas anonimizadas</button>
+        <p class="estado" id="estado-exportar" role="status"></p>
+
+        <h2>Borrar todo</h2>
+        <p>Borra todas tus notas y datos de este dispositivo. No se puede deshacer.</p>
+        <button type="button" class="boton peligro" id="borrar">Borrar todo</button>
+        <div id="confirmar-borrado" hidden>
+          <p><strong>¿Seguro? Se borrará todo y no hay vuelta atrás.</strong></p>
+          <div class="fila">
+            <button type="button" class="boton peligro" id="borrar-si">Sí, borrar todo</button>
+            <button type="button" class="boton" id="borrar-no">Cancelar</button>
+          </div>
+        </div>
+        <p class="estado" id="estado-borrar" role="status"></p>
+      </section>
+    </section>
   </main>
+
+  <nav class="pestanas" role="tablist" aria-label="Secciones">
+    <button type="button" role="tab" id="tab-hoy" aria-controls="panel-hoy" aria-selected="true">Hoy</button>
+    <button type="button" role="tab" id="tab-ruta" aria-controls="panel-ruta" aria-selected="false" tabindex="-1">Ruta</button>
+    <button type="button" role="tab" id="tab-notamos" aria-controls="panel-notamos" aria-selected="false" tabindex="-1">Notamos</button>
+    <button type="button" role="tab" id="tab-datos" aria-controls="panel-datos" aria-selected="false" tabindex="-1">Mis datos</button>
+  </nav>
   <script type="module" src="./src/ui/main.ts"></script>
 </body>
 </html>

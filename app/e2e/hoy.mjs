@@ -80,6 +80,25 @@ try {
   const ms = await ev(`window.__msHallazgos`);
   verificar(`motor de patrones con CPU 4×: ${ms.toFixed(1)} ms (≤ 100 ms)`, ms <= 100);
   await cdp.enviar('Emulation.setCPUThrottlingRate', { rate: 1 }, sessionId);
+  verificar('al cargar la demo se abre la pestaña Notamos',
+    await ev(`document.getElementById('tab-notamos').getAttribute('aria-selected') === 'true' && !document.getElementById('panel-notamos').hidden`));
+
+  // Ruta: propuesta desde los hallazgos, "Lo intento", marcar el día y persistir.
+  await ev(`document.getElementById('tab-ruta').click()`);
+  verificar('la pestaña Ruta muestra una propuesta con su porqué',
+    !(await ev(`document.getElementById('ruta-paso').hidden`)) &&
+      (await ev(`document.getElementById('ruta-porque').textContent`)).startsWith('Porque notamos esto'));
+  verificar('la propuesta muestra su fuente', (await ev(`document.querySelectorAll('#ruta-fuentes a').length`)) > 0);
+  await ev(`document.getElementById('ruta-intento').click()`);
+  await esperar(300);
+  verificar('"Lo intento" activa el paso', !(await ev(`document.getElementById('ruta-activa').hidden`)));
+  await ev(`document.getElementById('ruta-si').click()`);
+  await esperar(300);
+  verificar('marcar "Sí, lo hice" queda registrado', (await ev(`document.getElementById('ruta-si').getAttribute('aria-pressed')`)) === 'true');
+  await navegar();
+  verificar('la ruta y el día marcado persisten al recargar',
+    (await ev(`document.getElementById('tab-ruta').getAttribute('aria-selected')`)) === 'true' &&
+      (await ev(`document.getElementById('ruta-si').getAttribute('aria-pressed')`)) === 'true');
 
   await ev(`document.getElementById('ajustes').open = true; document.getElementById('borrar').click()`);
   verificar('borrar pide confirmación', await ev(`!document.getElementById('confirmar-borrado').hidden`));

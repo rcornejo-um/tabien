@@ -1,0 +1,463 @@
+{
+ "version": "catalogo-v1",
+ "estado_fuentes": "Fuentes citadas de memoria por el equipo técnico: VERIFICAR enlace, vigencia y que respalden cada paso antes de usar con personas reales (decisions/008).",
+ "fuentes": {
+  "cdc_sueno": {
+   "cita": "Centers for Disease Control and Prevention (CDC). Tips for Better Sleep.",
+   "url": "https://www.cdc.gov/sleep/about/index.html"
+  },
+  "aasm": {
+   "cita": "American Academy of Sleep Medicine. Healthy Sleep Habits (sleepeducation.org).",
+   "url": "https://sleepeducation.org/healthy-sleep/healthy-sleep-habits/"
+  },
+  "oms_actividad": {
+   "cita": "Organización Mundial de la Salud (2020). Directrices de la OMS sobre actividad física y hábitos sedentarios.",
+   "url": "https://www.who.int/publications/i/item/9789240015128"
+  },
+  "efsa_agua": {
+   "cita": "EFSA Panel on Dietetic Products, Nutrition and Allergies (2010). Scientific Opinion on Dietary reference values for water. EFSA Journal 8(3):1459.",
+   "url": "https://doi.org/10.2903/j.efsa.2010.1459"
+  },
+  "oms_dieta": {
+   "cita": "Organización Mundial de la Salud. Alimentación sana (nota descriptiva).",
+   "url": "https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet"
+  },
+  "oms_estres": {
+   "cita": "Organización Mundial de la Salud (2020). En tiempos de estrés, haz lo que importa: una guía ilustrada (Doing What Matters in Times of Stress).",
+   "url": "https://www.who.int/publications/i/item/9789240003927"
+  }
+ },
+ "areas": {
+  "sueno": {
+   "nombre": "Dormir mejor",
+   "pasos": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+   ]
+  },
+  "pantallas": {
+   "nombre": "Pantallas en la noche",
+   "pasos": [
+    "p1",
+    "p2",
+    "p3"
+   ]
+  },
+  "movimiento": {
+   "nombre": "Moverte más",
+   "pasos": [
+    "m1",
+    "m2",
+    "m3"
+   ]
+  },
+  "agua": {
+   "nombre": "Tomar agua",
+   "pasos": [
+    "a1",
+    "a2",
+    "a3"
+   ]
+  },
+  "comida": {
+   "nombre": "Comer con regularidad",
+   "pasos": [
+    "c1",
+    "c2",
+    "c3"
+   ]
+  },
+  "pausas": {
+   "nombre": "Pausas para el estrés",
+   "pasos": [
+    "e1",
+    "e2",
+    "e3"
+   ]
+  }
+ },
+ "habitos": [
+  {
+   "id": "s1",
+   "area": "sueno",
+   "descripcion": "Elige una hora para acostarte y respétala hoy.",
+   "dificultad": 1,
+   "prerrequisitos": [],
+   "evidencia": [
+    "cdc_sueno",
+    "aasm"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "s2",
+   "area": "sueno",
+   "descripcion": "Levántate a la misma hora todos los días, también el fin de semana.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "s1"
+   ],
+   "evidencia": [
+    "cdc_sueno",
+    "aasm"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "s3",
+   "area": "sueno",
+   "descripcion": "Media hora antes de acostarte, baja la luz y deja de estudiar o trabajar.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "s1"
+   ],
+   "evidencia": [
+    "aasm"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "s4",
+   "area": "sueno",
+   "descripcion": "Mantén tus horas de acostarte y levantarte toda la semana.",
+   "dificultad": 3,
+   "prerrequisitos": [
+    "s2",
+    "s3"
+   ],
+   "evidencia": [
+    "cdc_sueno",
+    "aasm"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "p1",
+   "area": "pantallas",
+   "descripcion": "Deja el celular cargando fuera de la pieza a las 23:30.",
+   "dificultad": 1,
+   "prerrequisitos": [],
+   "evidencia": [
+    "cdc_sueno"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "p2",
+   "area": "pantallas",
+   "descripcion": "Deja el celular fuera de la pieza a las 23:00.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "p1"
+   ],
+   "evidencia": [
+    "cdc_sueno"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "p3",
+   "area": "pantallas",
+   "descripcion": "Antes de dormir, 10 minutos sin pantallas: lee, estira o conversa.",
+   "dificultad": 3,
+   "prerrequisitos": [
+    "p2"
+   ],
+   "evidencia": [
+    "cdc_sueno",
+    "aasm"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "m1",
+   "area": "movimiento",
+   "descripcion": "Camina 10 minutos hoy, a tu ritmo.",
+   "dificultad": 1,
+   "prerrequisitos": [],
+   "evidencia": [
+    "oms_actividad"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes una lesión, dolor o una condición de salud, consulta a un profesional antes de aumentar la actividad."
+   ]
+  },
+  {
+   "id": "m2",
+   "area": "movimiento",
+   "descripcion": "Camina o muévete 20 minutos hoy.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "m1"
+   ],
+   "evidencia": [
+    "oms_actividad"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes una lesión, dolor o una condición de salud, consulta a un profesional antes de aumentar la actividad."
+   ]
+  },
+  {
+   "id": "m3",
+   "area": "movimiento",
+   "descripcion": "Haz 30 minutos de una actividad que te acelere un poco la respiración.",
+   "dificultad": 3,
+   "prerrequisitos": [
+    "m2"
+   ],
+   "evidencia": [
+    "oms_actividad"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes una lesión, dolor o una condición de salud, consulta a un profesional antes de aumentar la actividad."
+   ]
+  },
+  {
+   "id": "a1",
+   "area": "agua",
+   "descripcion": "Deja una botella o un vaso con agua a la vista donde estudias o trabajas.",
+   "dificultad": 1,
+   "prerrequisitos": [],
+   "evidencia": [
+    "efsa_agua"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes indicación médica de limitar líquidos (por ejemplo, por una enfermedad renal o cardíaca), sigue esa indicación."
+   ]
+  },
+  {
+   "id": "a2",
+   "area": "agua",
+   "descripcion": "Toma un vaso de agua con cada comida.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "a1"
+   ],
+   "evidencia": [
+    "efsa_agua"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes indicación médica de limitar líquidos (por ejemplo, por una enfermedad renal o cardíaca), sigue esa indicación."
+   ]
+  },
+  {
+   "id": "a3",
+   "area": "agua",
+   "descripcion": "Rellena tu botella al menos una vez durante el día.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "a1"
+   ],
+   "evidencia": [
+    "efsa_agua"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes indicación médica de limitar líquidos (por ejemplo, por una enfermedad renal o cardíaca), sigue esa indicación."
+   ]
+  },
+  {
+   "id": "c1",
+   "area": "comida",
+   "descripcion": "Agrega una fruta a tu día.",
+   "dificultad": 1,
+   "prerrequisitos": [],
+   "evidencia": [
+    "oms_dieta"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes alergias o una indicación médica sobre tu alimentación, sigue esa indicación."
+   ],
+   "tipo_comida": "aditivo"
+  },
+  {
+   "id": "c2",
+   "area": "comida",
+   "descripcion": "Almuerza a una hora parecida todos los días de esta semana.",
+   "dificultad": 2,
+   "prerrequisitos": [],
+   "evidencia": [
+    "oms_dieta"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes alergias o una indicación médica sobre tu alimentación, sigue esa indicación."
+   ],
+   "tipo_comida": "regularidad"
+  },
+  {
+   "id": "c3",
+   "area": "comida",
+   "descripcion": "Agrega una porción de verduras a una de tus comidas.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "c1"
+   ],
+   "evidencia": [
+    "oms_dieta"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": [
+    "Si tienes alergias o una indicación médica sobre tu alimentación, sigue esa indicación."
+   ],
+   "tipo_comida": "aditivo"
+  },
+  {
+   "id": "e1",
+   "area": "pausas",
+   "descripcion": "Haz una pausa de 3 minutos: respira lento y suelta los hombros.",
+   "dificultad": 1,
+   "prerrequisitos": [],
+   "evidencia": [
+    "oms_estres"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "e2",
+   "area": "pausas",
+   "descripcion": "En una pausa del día, sal a caminar 10 minutos sin pantalla.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "e1"
+   ],
+   "evidencia": [
+    "oms_estres",
+    "oms_actividad"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  },
+  {
+   "id": "e3",
+   "area": "pausas",
+   "descripcion": "Cuando te sientas a mil, nota tus pies en el suelo, tu respiración y cinco cosas que ves.",
+   "dificultad": 2,
+   "prerrequisitos": [
+    "e1"
+   ],
+   "evidencia": [
+    "oms_estres"
+   ],
+   "guardarrailes": [
+    "no_clinico",
+    "sin_metas_de_peso"
+   ],
+   "contraindicaciones": []
+  }
+ ],
+ "areas_por_variable": {
+  "sueno_horas": "sueno",
+  "pantallas": "pantallas",
+  "ejercicio": "movimiento",
+  "pasos": "movimiento",
+  "vasos_agua": "agua",
+  "hidratacion": "agua",
+  "alimentacion": "comida",
+  "estres": "pausas",
+  "descanso": "pausas"
+ },
+ "guardarrailes_prohibido": [
+  "calor",
+  "caloria",
+  "kcal",
+  "ayun",
+  "dieta",
+  "peso",
+  "adelgaz",
+  "kilo",
+  "imc",
+  "grasa",
+  "restring",
+  "saltar",
+  "omitir",
+  "quemar",
+  "evita comer",
+  "no comas",
+  "menos comida",
+  "porcion menor",
+  "dejar de comer",
+  "insomnio",
+  "depresi",
+  "ansiedad",
+  "trastorno",
+  "tratamiento",
+  "diagnost",
+  "pesate",
+  "pesarte",
+  "bascula",
+  "balanza",
+  "medir la cintura",
+  "pesarse"
+ ]
+}

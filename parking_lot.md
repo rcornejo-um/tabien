@@ -19,3 +19,6 @@ Ideas que aparecieron fuera de la fase en curso. Cada una indica de dónde sali�
 | 13 | Mínimo de días para mostrar hallazgos: 14 es técnico; con 30 días la FDR es 0,29. Evaluar 45–60 días | F3 | Decisión de producto |
 | 14 | Prior poblacional para la contracción (hoy 0): calcularlo desde D1 cuando exista | F3 | F3.1 |
 | 15 | Experimentos n-de-1 (§6.7) y detección de cambios de nivel con prueba estadística (hoy las tendencias son descriptivas) | F3 | F4 |
+| 16 | Activar el bandit v2 en el dispositivo cuando haya datos reales de aceptación y cumplimiento, con un porqué explicable | F4, `decisions/008` | F6 |
+| 17 | Medir el costo de `backdrop-filter` (vidrio) en gama baja; alternativa sin blur | F4, `decisions/009` | F5 |
+| 18 | Verificar las fuentes del catálogo (enlace, vigencia y respaldo de cada paso) | F4 | Antes del piloto |

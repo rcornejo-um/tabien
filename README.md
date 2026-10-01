@@ -17,7 +17,8 @@ Abre la URL que aparece (también funciona desde el teléfono, en la misma red).
 
 1. Escribe una nota en **Hoy** y, si quieres, horas de sueño, pasos y agua. Pulsa **Guardar**.
 2. Para ver **Lo que notamos** sin esperar 14 días: **Mis datos → Cargar datos de ejemplo** (60 días de una persona inventada).
-3. **Mis datos → Borrar todo** deja el dispositivo limpio.
+3. En **Ruta**, elige una meta o acepta el paso que te proponemos según lo que notamos. Marca cada día si lo hiciste: a los 7 días la ruta avanza o se hace más fácil.
+4. **Mis datos → Borrar todo** deja el dispositivo limpio.
 
 Los temas de las notas se detectan con palabras clave (M0). No hay modelo de ML entrenado con datos reales todavía.
 
